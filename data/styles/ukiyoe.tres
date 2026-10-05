@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="ComicStyle" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/comic_style.gd" id="1_script"]
+
+[resource]
+script = ExtResource("1_script")
+style_name = "Ukiyo-e Woodblock"
+paper_color = Color(0.953, 0.890, 0.765, 1.0)
+ink_color = Color(0.106, 0.133, 0.200, 1.0)
+sky_top = Color(0.941, 0.788, 0.604, 1.0)
+sky_bottom = Color(0.965, 0.906, 0.800, 1.0)
+ground_color = Color(0.184, 0.306, 0.431, 1.0)
+backdrop_color = Color(0.310, 0.486, 0.639, 1.0)
+accent_color = Color(0.820, 0.275, 0.184, 1.0)
+backdrop = 1
+posterize_levels = 4
+halftone_strength = 0.12
+halftone_scale = 4.0
+outline_strength = 1.6
+outline_threshold = 0.16
+paper_grain = 0.4
+paper_tint = 0.55
+saturation = 0.95
+transition_caption = "MEANWHILE, ON A FLOATING SHORE..."

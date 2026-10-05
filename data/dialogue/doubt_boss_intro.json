@@ -1,0 +1,44 @@
+{
+  "start": "arrive",
+  "nodes": {
+    "arrive": {
+      "speaker": "narrator",
+      "text": "Wings the size of sails unfold from the smoke. A moth, vast and grey, every lantern of the city hanging from its legs on silk.",
+      "next": "b1"
+    },
+    "b1": {
+      "speaker": "lamplighter",
+      "text": "Another lamp come to be put out.",
+      "next": "b2"
+    },
+    "b2": {
+      "speaker": "lamplighter",
+      "text": "Do you know what I carry, samurai? The ones the fog would swallow. I walk them home. Your master has no home to walk to - so he wants all of ours.",
+      "choices": [
+        {
+          "text": "Then why didn't you stop him?",
+          "next": "b_why",
+          "effects": {
+            "hope": 3
+          }
+        },
+        {
+          "text": "Enough talk.",
+          "next": "b_fight",
+          "effects": {
+            "hope": -3
+          }
+        }
+      ]
+    },
+    "b_why": {
+      "speaker": "lamplighter",
+      "text": "I am stopping him. With what's left of me.",
+      "next": "b_fight"
+    },
+    "b_fight": {
+      "speaker": "lamplighter",
+      "text": "Let me show you what a light looks like up close."
+    }
+  }
+}

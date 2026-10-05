@@ -1,0 +1,36 @@
+{
+  "variants": [
+    {
+      "requires": {
+        "flag": "saved_by_light"
+      },
+      "start": "saved"
+    }
+  ],
+  "start": "escaped",
+  "nodes": {
+    "escaped": {
+      "speaker": "narrator",
+      "text": "An old Buddhist vihara, half-swallowed by the hill. Gold light pooled on the floor like water.",
+      "next": "esc2"
+    },
+    "esc2": {
+      "speaker": "bhikkhu",
+      "text": "You ran well. Most of the ones he raises never think to run. Come - sit with me."
+    },
+    "saved": {
+      "speaker": "narrator",
+      "text": "He woke on cool stone. Gold light. Incense. A face - an ordinary, unmasked, smiling face.",
+      "next": "sv2"
+    },
+    "sv2": {
+      "speaker": "bhikkhu",
+      "text": "Easy. You were very nearly gone. Your light had sunk so low he could reach right in and take it.",
+      "next": "sv3"
+    },
+    "sv3": {
+      "speaker": "bhikkhu",
+      "text": "We pulled you back through the gutter between pages. It cost us a lamp or two. You were worth it."
+    }
+  }
+}

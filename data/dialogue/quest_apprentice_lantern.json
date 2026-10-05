@@ -1,0 +1,14 @@
+{
+  "start": "q1",
+  "nodes": {
+    "q1": {
+      "speaker": "narrator",
+      "text": "Behind the cellar's crates, a lantern is still burning. No oil. No wick. Just a flame that refuses to go out.",
+      "next": "q2"
+    },
+    "q2": {
+      "speaker": "narrator",
+      "text": "When you lift it, the flame leans toward the market - toward a boy waiting for his sister."
+    }
+  }
+}

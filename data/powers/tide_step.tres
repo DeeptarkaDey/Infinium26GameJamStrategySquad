@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="PowerData" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/power_data.gd" id="1_script"]
+
+[resource]
+script = ExtResource("1_script")
+id = "tide_step"
+display_name = "Tide Step"
+description = "Kagami's last wave carries you. Dash twice before catching your breath."
+source_world = "world_order"
+kind = 0
+cooldown = 0.0
+stat_mods = {"dash_charges": 1, "max_health": 10}
+color = Color(0.498, 0.816, 1.000, 1.0)

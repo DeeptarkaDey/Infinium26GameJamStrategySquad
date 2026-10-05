@@ -1,0 +1,223 @@
+{
+  "variants": [
+    {
+      "requires": {
+        "flag": "aki_epilogue"
+      },
+      "start": "after_all"
+    },
+    {
+      "requires": {
+        "flag": [
+          "aki_page_returned",
+          "boss_defeated_world_truth"
+        ]
+      },
+      "start": "post"
+    },
+    {
+      "requires": {
+        "flag": [
+          "aki_page_quest",
+          "found_last_page"
+        ],
+        "not_flag": "aki_page_returned"
+      },
+      "start": "back"
+    },
+    {
+      "requires": {
+        "flag": "aki_page_returned"
+      },
+      "start": "after_return"
+    },
+    {
+      "requires": {
+        "flag": "aki_met"
+      },
+      "start": "again"
+    }
+  ],
+  "start": "a1",
+  "nodes": {
+    "a1": {
+      "speaker": "aki",
+      "text": "Whoa! You're the guy from my drawings! The straw hat, the sad eyes. Look!",
+      "effects": {
+        "set_flag": "aki_met"
+      },
+      "next": "a2"
+    },
+    "a2": {
+      "speaker": "narrator",
+      "text": "Her sketchbook is full of panels. A shore. A city in fog. A temple with a masked man. And in each one, a samurai in a straw hat - standing over someone who glows.",
+      "next": "a3"
+    },
+    "a3": {
+      "speaker": "aki",
+      "text": "I dream them. Every world has a protector, and every time the hat man comes... the protector goes out like a lamp.",
+      "choices": [
+        {
+          "text": "...What happens at the end of the book?",
+          "next": "a_end",
+          "effects": {
+            "set_flag": "clue_truth"
+          }
+        },
+        {
+          "text": "There's a girl on a shore in this one.",
+          "next": "a_hana",
+          "requires": {
+            "flag": "hana_charm_returned"
+          }
+        },
+        {
+          "text": "A boy with a lantern?",
+          "next": "a_tobi",
+          "requires": {
+            "flag": "suzu_home"
+          }
+        },
+        {
+          "text": "It's just a drawing.",
+          "next": "a_dismiss",
+          "effects": {
+            "hope": -2
+          }
+        },
+        {
+          "text": "Can I keep one?",
+          "next": "a_keep",
+          "effects": {
+            "hope": 4,
+            "set_flag": "clue_truth"
+          }
+        }
+      ]
+    },
+    "a_hana": {
+      "speaker": "aki",
+      "text": "Yeah! She's holding something on a string and looking at the sea. She used to be crying in that one. Now she isn't. Weird, huh?",
+      "next": "a3"
+    },
+    "a_tobi": {
+      "speaker": "aki",
+      "text": "A boy and a little girl and a lantern. That one drew itself. I woke up and it was just there.",
+      "next": "a3"
+    },
+    "a_end": {
+      "speaker": "aki",
+      "text": "That's the thing - I don't know.",
+      "next": "a_lost"
+    },
+    "a_dismiss": {
+      "speaker": "aki",
+      "text": "Everything's just a drawing here, dummy. ...But okay, even if it is.",
+      "next": "a_lost"
+    },
+    "a_keep": {
+      "speaker": "aki",
+      "text": "Sure! Here. I'll draw you a happy one later, okay? Promise.",
+      "next": "a_lost"
+    },
+    "a_lost": {
+      "speaker": "aki",
+      "text": "The last page blew away. Right down the stairs into the old archive under the depot - and stuff nests down there now.",
+      "next": "a_lost2"
+    },
+    "a_lost2": {
+      "speaker": "aki",
+      "text": "Could you get it back? I'm not finished with it. I can feel it.",
+      "effects": {
+        "set_flag": "aki_page_quest"
+      }
+    },
+    "again": {
+      "speaker": "aki",
+      "text": "The archive's under the depot - go through the big kiosk, then south, then south again. Watch out for bats! Grandma Iro's down by the kiosk if you need anything."
+    },
+    "back": {
+      "speaker": "aki",
+      "text": "You found it!",
+      "next": "back2"
+    },
+    "back2": {
+      "speaker": "narrator",
+      "text": "She looks at the page for a long time. The hat man kneels. The masked monk's mask is cracked down the middle, and something red looks out.",
+      "next": "back3"
+    },
+    "back3": {
+      "speaker": "aki",
+      "text": "I don't like this ending. ...Should I keep it? Grandma says you don't erase what's true.",
+      "choices": [
+        {
+          "text": "Draw a new one. The ending's up to whoever holds the brush.",
+          "next": "new_end",
+          "effects": {
+            "hope": 8,
+            "set_flag": [
+              "aki_page_returned",
+              "aki_new_ending",
+              "kept_promise"
+            ],
+            "give_potion": 1
+          }
+        },
+        {
+          "text": "Keep it. It's true.",
+          "next": "keep_end",
+          "effects": {
+            "hope": 3,
+            "set_flag": "aki_page_returned",
+            "give_potion": 1
+          }
+        }
+      ]
+    },
+    "new_end": {
+      "speaker": "aki",
+      "text": "Okay! I'll draw him standing up. Facing the monk. Holding... a light, maybe? Not a sword. I'll figure it out. Here - Grandma's tonic, for the hard part."
+    },
+    "keep_end": {
+      "speaker": "aki",
+      "text": "Okay. True things go in the book. I'll just draw the next page better. Here - Grandma's tonic, for the hard part."
+    },
+    "after_return": {
+      "speaker": "aki",
+      "text": "I'm still drawing! Don't peek. ...Okay, you can peek a tiny bit after you beat the scary mirror thing."
+    },
+    "post": {
+      "speaker": "aki",
+      "text": "The hat man in my book... he changed. He looks like you now. Not like the one in the mirrors.",
+      "next": "post2"
+    },
+    "post2": {
+      "speaker": "aki",
+      "text": "Wanna see the last panel?",
+      "choices": [
+        {
+          "text": "Show me.",
+          "next": "post_show",
+          "effects": {
+            "hope": 6,
+            "set_flag": "aki_epilogue",
+            "give_potion": 2
+          }
+        }
+      ]
+    },
+    "post_show": {
+      "speaker": "narrator",
+      "text": "You, turning away from a masked monk. Behind you, every light you didn't take - a shore, a lantern, a page - shining on its own.",
+      "next": "post3"
+    },
+    "post3": {
+      "speaker": "aki",
+      "text": "It's not finished. You have to go finish it. Take Grandma's last tonics - she said you'd need them more than her bones do."
+    },
+    "after_all": {
+      "speaker": "aki",
+      "text": "Go finish it. I'll draw the very last panel when you're done. With you smiling, maybe."
+    }
+  }
+}

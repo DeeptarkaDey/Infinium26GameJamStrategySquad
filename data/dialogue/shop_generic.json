@@ -1,0 +1,24 @@
+{
+  "start": "s1",
+  "nodes": {
+    "s1": {
+      "speaker": "merchant",
+      "text": "Steel for sale, steel for trade. Prices depend on the light in your eyes.",
+      "text_low_hope": "You've the look of the lost. The lost pay extra.",
+      "text_high_hope": "Ah, a bright one! Bright ones get the good prices.",
+      "choices": [
+        {
+          "text": "Show me.",
+          "next": "end",
+          "effects": {
+            "action": "open_shop"
+          }
+        },
+        {
+          "text": "Not now.",
+          "next": "end"
+        }
+      ]
+    }
+  }
+}

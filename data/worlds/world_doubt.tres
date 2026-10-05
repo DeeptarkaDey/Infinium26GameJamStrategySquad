@@ -1,0 +1,92 @@
+[gd_resource type="Resource" script_class="WorldData" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/world_data.gd" id="1_script"]
+[ext_resource type="Resource" path="res://data/styles/noir.tres" id="2_style"]
+
+[resource]
+script = ExtResource("1_script")
+style = ExtResource("2_style")
+id = "world_doubt"
+display_name = "Lantern City"
+subtitle = "Mission 2 - The Doubt"
+kind = 1
+mission_index = 2
+intro_dialogue = "doubt_intro"
+layout = "
+                                                                 ##############
+                                                                 #............#
+                                          ################   #####............#
+                                          #..............#   #o...............#
+                       ###############    #......T.......#   #................#
+                       #............o#    #..A........A..#####..........P.....#
+                       #.............#    #..............D...D....C...........#
+                       #...E.....E...######....##..##....D...D................#
+                       #......#......D....D..............#####................#
+                       #......#......D....D..............#   #.......o........#
+                       #.............######......E.......#   ##########DD######
+                       #.............#    #.c..........c.#            #..#
+                       #......A......#    #..............#            #..#
+                       #.............#    #######DD#######            #..#
+                       #######DD######          #..#                  #..#
+                             #..#               #..#                  #..#
+                             #..#               #..#          #########DD##########
+                             #..#               #..#          #...................#
+ ##################    #######DD######    #######DD#######    #...................#
+ #o..............o#    #.............#    #..............#    #...................#
+ #................#    #.............#    #..............#    #....##.......##....#
+ #.....N....N.....#    #..E.......F..#    #..R...##......#    #....##.......##....#
+ #................#    #.............#    #..............#    #...................#
+ #................######.............######..............######...................#
+ #................D....D..#...U...#..D....D......H.......D....D.........B.........#
+ #..S.............D....D.............D....D..............D....D...................#
+ #................######.............######..............######...................#
+ #........$.......#    #..........E..#    #...F..##...R..#    #....##.......##....#
+ #................#    #.............#    #..............#    #....##.......##....#
+ #................#    #.............#    #..............#    #...................#
+ #...............o#    #######DD######    #######DD#######    #...................#
+ ##################          #..#               #..#          #...................#
+                             #..#               #..#          #####################
+                             #..#               #..#
+                       #######DD######          #..#
+                       #.............#    #######DD######
+                       #.............#    #.............#
+                       #.............#    #.T.........T.#
+   #####################...H.....H...#    #.............#    ##########
+   #o.........D........D.............#    #.............#    #o.......#
+   #..........D........D.............#    #......U......#    #........#
+   #..........##########......F......#    #.............######........#
+   #.....N....#        #.............#    #.............D....D....C...#
+   #..........#        #o............#    #.............D....D........#
+   #..........#        ###############    #......K......######.q......#
+   #..........#                           #o...........o#    #........#
+   #.........o#                           ###############    ##########
+   ############
+
+
+
+
+
+
+"
+npcs = [{"name": "Widow Mei", "dialogue": "doubt_mei", "look": {"height": 62, "body": "#2a2a30", "trim": "#d01c1c"}}, {"name": "Envoy of the Veil", "dialogue": "doubt_envoy", "look": {"height": 78, "body": "#141418", "trim": "#d9a33a", "mask": "veil", "mask_color": "#d8d2c4", "crown": "spiked", "crown_color": "#e0b040", "eyes": "#ff3b2f"}}, {"name": "Tobi", "dialogue": "doubt_tobi", "look": {"height": 42, "width": 20, "body": "#5a5a60", "trim": "#d01c1c"}}]
+shopkeeper = {"name": "Blind Pawnbroker", "dialogue": "shop_generic", "look": {"height": 64, "body": "#3a3a42", "mask": "veil", "mask_color": "#5a5a60", "crown": "eboshi"}}
+quest_items = [{"name": "the Apprentice's Lantern", "flag": "found_apprentice_lantern", "requires": "tobi_helped", "dialogue": "quest_apprentice_lantern"}]
+shop_stock = PackedStringArray("lamplight_tanto", "wave_cutter", "storm_rod", "noir_odachi")
+enemy_name = "Smoke Hound"
+enemy_health = 40.0
+enemy_damage = 13.0
+enemy_look = {"height": 50, "width": 40, "body": "#2a2a30", "mask": "oni", "mask_color": "#e8e2d6", "crown": "none", "eyes": "#d01c1c"}
+enemy_variants = {"archer": {"name": "Lantern Sniper", "look": {"body": "#2a2a30", "mask": "veil", "eyes": "#ffd36b"}}, "bat": {"name": "Ash Moth", "look": {"body": "#5a5a62", "mask_color": "#c8c8c8", "eyes": "#ffd36b"}}, "slime": {"name": "Wax Slime", "look": {"body": "#d9c9a0", "eyes": "#d01c1c"}}, "brute": {"name": "Furnace Brute", "look": {"body": "#3a3030", "mask_color": "#8a2a2a", "eyes": "#ff8a2a"}}, "charger": {"name": "Rickshaw Ghoul", "look": {"body": "#1e1e24", "mask": "noh", "eyes": "#d01c1c"}}, "turret": {"name": "Paper Lantern", "look": {"body": "#c44a2a", "mask": "sun", "crown_color": "#ffd36b", "eyes": "#2a2a2a"}}}
+gold_per_enemy = Vector2i(5, 11)
+weapon_drop_chance = 0.18
+drop_table = PackedStringArray()
+boss_name = "The Lamplighter"
+boss_health = 560.0
+boss_damage = 19.0
+boss_look = {"body": "#5b4a3a", "trim": "#ffd36b", "crown": "none", "crown_color": "#ffb347", "eyes": "#ff5a2a"}
+boss_intro_dialogue = "doubt_boss_intro"
+boss_defeat_dialogue = "doubt_boss_defeat"
+boss_power = "lantern_flare"
+boss_hope_on_kill = -6.0
+boss_form = "moth"
+portal_target = "sanctum"

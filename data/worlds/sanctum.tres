@@ -1,0 +1,40 @@
+[gd_resource type="Resource" script_class="WorldData" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/world_data.gd" id="1_script"]
+[ext_resource type="Resource" path="res://data/styles/sumi_ink.tres" id="2_style"]
+
+[resource]
+script = ExtResource("1_script")
+style = ExtResource("2_style")
+id = "sanctum"
+display_name = "Temple of the Veiled Moon"
+subtitle = "The Master's sanctum"
+kind = 0
+mission_index = 0
+intro_dialogue = "sanctum_intro"
+layout = "
+ ###################    ##############
+ #o...............o#    #o...........#
+ #.......N.........#    #............#
+ #.................#    #............#
+ #...#.........#...######............#
+ #.................D....D............#
+ #.......c.........D....D............#
+ #............N....######............#
+ #...S.............#    #............#
+ #.................#    #......P.....#
+ #.................#    #............#
+ #o................#    #............#
+ ###################    #............#
+                        #............#
+                        #............#
+                        #............#
+                        #............#
+                        #...........o#
+                        ##############
+
+"
+npcs = [{"name": "The Master", "dialogue": "monk", "look": {"height": 96, "width": 46, "body": "#2a1c2e", "trim": "#d9a33a", "mask": "noh", "crown": "halo", "crown_color": "#e8c35a", "eyes": "#ff3b2f"}}, {"name": "Veiled Acolyte", "dialogue": "acolyte", "look": {"height": 74, "body": "#3b2a3f", "trim": "#c9a24a", "mask": "veil", "mask_color": "#e9e1cf", "crown": "lotus", "crown_color": "#d9a33a", "eyes": "#ff3b2f"}}]
+portal_target = ""
+portal_requires_key = false
+portal_requires_boss = false

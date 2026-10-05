@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="WeaponData" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/weapon_data.gd" id="1_script"]
+
+[resource]
+script = ExtResource("1_script")
+id = "rusted_katana"
+display_name = "Rusted Katana"
+description = "The blade the Master gave you as a boy. It has never been sharpened."
+kind = 0
+rarity = 0
+damage = 10.0
+attack_cooldown = 0.38
+reach = 56.0
+knockback = 220.0
+price = 0
+drop_weight = 0.0
+sfx_word = "SLASH!"
+blade_color = Color(0.722, 0.675, 0.627, 1.0)
+world_tags = PackedStringArray()

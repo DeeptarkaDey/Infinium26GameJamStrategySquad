@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="PowerData" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/power_data.gd" id="1_script"]
+
+[resource]
+script = ExtResource("1_script")
+id = "lantern_flare"
+display_name = "Lantern Flare"
+description = "The Lamplighter's flame, still burning. [Q] burst of light that damages and stuns."
+source_world = "world_doubt"
+kind = 1
+cooldown = 5.0
+stat_mods = {"luck": 0.1}
+color = Color(1.000, 0.827, 0.420, 1.0)

@@ -1,0 +1,54 @@
+{
+  "start": "e1",
+  "nodes": {
+    "e1": {
+      "speaker": "narrator",
+      "text": "At the end of the line hangs an eye made of broken mirrors. In every shard: a samurai in a straw hat. His hat. His stance. His blade. Yours.",
+      "next": "e2"
+    },
+    "e2": {
+      "speaker": "echo",
+      "text": "So he raised you too.",
+      "next": "e3"
+    },
+    "e3": {
+      "speaker": "echo",
+      "text": "He found me in the ash of a burned village. Gave me a name. Sent me to three worlds. I said no at the last one. So he went and found another me.",
+      "choices": [
+        {
+          "text": "Then let's both say no.",
+          "next": "e_both",
+          "effects": {
+            "hope": 4
+          },
+          "requires": {
+            "hope_min": 50
+          }
+        },
+        {
+          "text": "Only one of us leaves.",
+          "next": "e_fight",
+          "effects": {
+            "hope": -4
+          }
+        },
+        {
+          "text": "...I'm sorry.",
+          "next": "e_fight",
+          "effects": {
+            "hope": 2
+          }
+        }
+      ]
+    },
+    "e_both": {
+      "speaker": "echo",
+      "text": "It's too late for me. He's already in my light - I can feel him pulling. Take it. And then don't give him yours.",
+      "next": "e_fight"
+    },
+    "e_fight": {
+      "speaker": "echo",
+      "text": "Show me the samurai I could have been."
+    }
+  }
+}

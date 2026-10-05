@@ -1,0 +1,20 @@
+{
+  "start": "q1",
+  "nodes": {
+    "q1": {
+      "speaker": "narrator",
+      "text": "The last page, pinned under a fallen billboard. Aki's drawing: the hat man kneeling before a masked monk.",
+      "next": "q2"
+    },
+    "q2": {
+      "speaker": "narrator",
+      "text": "But the mask is cracked down the middle. Behind it, something red. Something horned. Something that is not your master's face at all.",
+      "effects": {
+        "set_flag": [
+          "saw_last_page",
+          "clue_truth"
+        ]
+      }
+    }
+  }
+}

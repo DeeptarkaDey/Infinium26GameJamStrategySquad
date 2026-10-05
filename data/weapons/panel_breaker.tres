@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="WeaponData" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/weapon_data.gd" id="1_script"]
+
+[resource]
+script = ExtResource("1_script")
+id = "panel_breaker"
+display_name = "Panel Breaker"
+description = "Cuts through the gutters between pages."
+kind = 2
+rarity = 3
+damage = 34.0
+attack_cooldown = 0.6
+reach = 92.0
+knockback = 420.0
+price = 700
+drop_weight = 0.4
+sfx_word = "KA-RAKK!"
+blade_color = Color(0.608, 0.361, 1.000, 1.0)
+world_tags = PackedStringArray()

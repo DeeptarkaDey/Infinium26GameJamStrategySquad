@@ -1,0 +1,32 @@
+{
+  "start": "d1",
+  "nodes": {
+    "d1": {
+      "speaker": "narrator",
+      "text": "He had given away too much of himself. There was nothing left to run with.",
+      "next": "d2"
+    },
+    "d2": {
+      "speaker": "monk",
+      "text": "Sleep, child. You were the finest tool I ever forged.",
+      "next": "d3"
+    },
+    "d3": {
+      "speaker": "narrator",
+      "text": "The page went black.",
+      "next": "d4"
+    },
+    "d4": {
+      "speaker": "unknown",
+      "text": "...Not yet. Not this one.",
+      "next": "d5"
+    },
+    "d5": {
+      "speaker": "narrator",
+      "text": "Somewhere far away, someone lit a lamp - and the light remembered his name.",
+      "effects": {
+        "hope": 30
+      }
+    }
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "variants": [
+    {
+      "requires": {
+        "flag": "boss_defeated_world_doubt"
+      },
+      "start": "post"
+    },
+    {
+      "requires": {
+        "flag": [
+          "doubt_envoy_met",
+          "tobi_helped"
+        ],
+        "not_flag": "envoy_doubt_obeyed"
+      },
+      "start": "spared"
+    },
+    {
+      "requires": {
+        "flag": "doubt_envoy_met"
+      },
+      "start": "again"
+    }
+  ],
+  "start": "e1",
+  "nodes": {
+    "e1": {
+      "speaker": "envoy_veil",
+      "text": "Little blade. The widow is filling your ears with fog. Shall I clear them?",
+      "effects": {
+        "set_flag": "doubt_envoy_met"
+      },
+      "next": "e2"
+    },
+    "e2": {
+      "speaker": "envoy_veil",
+      "text": "There is a boy in the alley who steals bread. The Master dislikes thieves. Make an example of him. It will please the Master.",
+      "choices": [
+        {
+          "text": "Consider it done.",
+          "next": "e_obey",
+          "effects": {
+            "hope": -10,
+            "set_flag": "envoy_doubt_obeyed"
+          }
+        },
+        {
+          "text": "He's a child.",
+          "next": "e_defy",
+          "effects": {
+            "hope": 5
+          }
+        },
+        {
+          "text": "What happens to your face when the Master is done with you?",
+          "next": "e_face",
+          "effects": {
+            "hope": 3
+          },
+          "requires": {
+            "flag": "doubted_once"
+          }
+        }
+      ]
+    },
+    "e_obey": {
+      "speaker": "envoy_veil",
+      "text": "Mm. Your light dims so prettily."
+    },
+    "e_defy": {
+      "speaker": "envoy_veil",
+      "text": "All of them were children once. Even the Master. Even you."
+    },
+    "e_face": {
+      "speaker": "envoy_veil",
+      "text": "...... I do not remember."
+    },
+    "spared": {
+      "speaker": "envoy_veil",
+      "text": "You spared the thief. You fetch lanterns for widows. The Master notes everything, little blade. Everything."
+    },
+    "again": {
+      "speaker": "envoy_veil",
+      "text": "The Lamplighter circles beyond the canal. His lamps are very bright. Put them out."
+    },
+    "post": {
+      "speaker": "envoy_veil",
+      "text": "The Lamplighter's lamp is out. Do you hear them, little blade? All the lost, knocking in the fog. It's music."
+    }
+  }
+}

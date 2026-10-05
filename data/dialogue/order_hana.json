@@ -1,0 +1,256 @@
+{
+  "variants": [
+    {
+      "requires": {
+        "flag": "hana_vow"
+      },
+      "start": "after_vow"
+    },
+    {
+      "requires": {
+        "flag": "hana_epilogue"
+      },
+      "start": "after_all"
+    },
+    {
+      "requires": {
+        "flag": [
+          "hana_helped",
+          "boss_defeated_world_order"
+        ]
+      },
+      "start": "epi1"
+    },
+    {
+      "requires": {
+        "flag": [
+          "hana_helped",
+          "found_jun_charm"
+        ],
+        "not_flag": "hana_charm_returned"
+      },
+      "start": "ret1"
+    },
+    {
+      "requires": {
+        "flag": "hana_charm_returned"
+      },
+      "start": "after_return"
+    },
+    {
+      "requires": {
+        "flag": "hana_helped"
+      },
+      "start": "after_kind"
+    },
+    {
+      "requires": {
+        "flag": [
+          "hana_spurned",
+          "boss_defeated_world_order"
+        ]
+      },
+      "start": "spurned_post"
+    },
+    {
+      "requires": {
+        "flag": "hana_spurned"
+      },
+      "start": "after_cruel"
+    }
+  ],
+  "start": "h1",
+  "nodes": {
+    "h1": {
+      "speaker": "hana",
+      "text": "Mister samurai! Have you seen my papa's boat? It went out the morning the waves turned black.",
+      "next": "h2"
+    },
+    "h2": {
+      "speaker": "hana",
+      "text": "Lady Kagami holds the black water back every night. I bring her rice balls. She's so tired now...",
+      "choices": [
+        {
+          "text": "I'll look for him. Here - eat something first. (10 gold)",
+          "next": "h_kind",
+          "effects": {
+            "gold": -10,
+            "hope": 10,
+            "set_flag": "hana_helped"
+          },
+          "requires": {
+            "gold_min": 10
+          }
+        },
+        {
+          "text": "I'll keep an eye out for him.",
+          "next": "h_kind",
+          "effects": {
+            "hope": 5,
+            "set_flag": "hana_helped"
+          }
+        },
+        {
+          "text": "I don't have time for this.",
+          "next": "h_cold",
+          "effects": {
+            "hope": -5,
+            "set_flag": "hana_spurned"
+          }
+        },
+        {
+          "text": "Out of my way, child.",
+          "next": "h_cruel",
+          "effects": {
+            "hope": -12,
+            "set_flag": "hana_spurned"
+          }
+        }
+      ]
+    },
+    "h_kind": {
+      "speaker": "hana",
+      "text": "You're nice. Not like the fox-man. Papa gave me this - he said it opens the way home, wherever home is. Maybe you need it more than me.",
+      "next": "h_key"
+    },
+    "h_key": {
+      "speaker": "narrator",
+      "text": "Hana's key - a child's kindness - is warm in your hand.",
+      "effects": {
+        "give_key": "current"
+      },
+      "next": "h_ask"
+    },
+    "h_ask": {
+      "speaker": "hana",
+      "text": "Papa's name is Jun. He has a scar on his chin and he sings really badly. Old Sabu at the net store knows every boat on the shore. Ask him? Please?"
+    },
+    "h_cold": {
+      "speaker": "hana",
+      "text": "...Okay. Sorry for bothering you."
+    },
+    "h_cruel": {
+      "speaker": "narrator",
+      "text": "She steps aside without a word. She is trying very hard not to cry."
+    },
+    "after_kind": {
+      "speaker": "hana",
+      "text": "Did Old Sabu know anything? His net store is past the big square, to the south-west. Papa says Sabu knows where every boat sleeps."
+    },
+    "ret1": {
+      "speaker": "hana",
+      "text": "That's... that's Papa's charm. He carved my name on it. Where is he? Where's Papa?",
+      "choices": [
+        {
+          "text": "He didn't make it back, Hana. But he held on to this until the end.",
+          "next": "ret_truth",
+          "effects": {
+            "hope": 8,
+            "set_flag": [
+              "hana_charm_returned",
+              "hana_told_truth"
+            ],
+            "give_potion": 2
+          }
+        },
+        {
+          "text": "He's still out past the black water. He sent this so you'd know he's coming.",
+          "next": "ret_lie",
+          "effects": {
+            "hope": -2,
+            "set_flag": "hana_charm_returned",
+            "give_potion": 1
+          }
+        }
+      ]
+    },
+    "ret_truth": {
+      "speaker": "hana",
+      "text": "...Oh.",
+      "next": "ret_truth2"
+    },
+    "ret_truth2": {
+      "speaker": "narrator",
+      "text": "She doesn't cry. She holds the charm against her chest, the way he must have.",
+      "next": "ret_truth3"
+    },
+    "ret_truth3": {
+      "speaker": "hana",
+      "text": "These are Lady Kagami's rice balls. She made them for Papa's trips. He'd want you to have them. ...Thank you for telling me."
+    },
+    "ret_lie": {
+      "speaker": "hana",
+      "text": "I knew it! I'll wait right here for him. Take these - Lady Kagami's rice balls. For the long walk!"
+    },
+    "after_return": {
+      "speaker": "hana",
+      "text": "I'm wearing the charm now. Lady Kagami says the tide keeps what it loves. I think it loved Papa."
+    },
+    "epi1": {
+      "speaker": "narrator",
+      "text": "Without its warden, the sea keeps rising. Black water laps at the village steps.",
+      "next": "epi2"
+    },
+    "epi2": {
+      "speaker": "hana",
+      "text": "Lady Kagami isn't standing in the surf anymore. The water won't stop. ...Did you do that?",
+      "choices": [
+        {
+          "text": "I did. And I'm going to make it right. I promise.",
+          "next": "epi_vow",
+          "effects": {
+            "hope": 6,
+            "set_flag": [
+              "hana_epilogue",
+              "hana_vow",
+              "kept_promise"
+            ],
+            "give_weapon": "tide_naginata"
+          }
+        },
+        {
+          "text": "It had to be done.",
+          "next": "epi_cold",
+          "effects": {
+            "hope": -4,
+            "set_flag": "hana_epilogue"
+          }
+        }
+      ]
+    },
+    "epi_vow": {
+      "speaker": "hana",
+      "text": "Then take Papa's spear. He said a promise needs something to hold it up. Bring the light back, samurai. I'll be watching the water.",
+      "next": "epi_vow2"
+    },
+    "epi_vow2": {
+      "speaker": "narrator",
+      "text": "Something steadies in you. A promise is a kind of light - one nobody can take from you."
+    },
+    "epi_cold": {
+      "speaker": "hana",
+      "text": "...Okay.",
+      "next": "epi_cold2"
+    },
+    "epi_cold2": {
+      "speaker": "narrator",
+      "text": "She sits at the edge of the steps, holding something small on a string, and watches the water climb."
+    },
+    "after_vow": {
+      "speaker": "hana",
+      "text": "The water's still black. But you promised. So I'm not scared."
+    },
+    "after_all": {
+      "speaker": "narrator",
+      "text": "Hana watches the black water and doesn't turn around."
+    },
+    "spurned_post": {
+      "speaker": "narrator",
+      "text": "Hana sits on the steps, watching the black water climb past the second stair. She doesn't look up."
+    },
+    "after_cruel": {
+      "speaker": "narrator",
+      "text": "Hana won't look at you."
+    }
+  }
+}

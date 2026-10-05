@@ -1,0 +1,25 @@
+{
+  "start": "s0",
+  "nodes": {
+    "s0": {
+      "speaker": "narrator",
+      "text": "The sacred light poured into the cracks of the mask until there was nothing left to crack.",
+      "next": "s1"
+    },
+    "s1": {
+      "speaker": "monk",
+      "text": "...It's so bright. I had forgotten... it was warm.",
+      "text_low_hope": "...You could have been... mine...",
+      "next": "s2"
+    },
+    "s2": {
+      "speaker": "narrator",
+      "text": "The three stolen lights slipped free and fled home - to a shore, a city, a metro of a thousand dots.",
+      "next": "s3"
+    },
+    "s3": {
+      "speaker": "narrator",
+      "text": "And for the first time in eighteen winters, the samurai stood up."
+    }
+  }
+}

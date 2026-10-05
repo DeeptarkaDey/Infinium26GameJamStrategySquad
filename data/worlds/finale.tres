@@ -1,0 +1,55 @@
+[gd_resource type="Resource" script_class="WorldData" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/world_data.gd" id="1_script"]
+[ext_resource type="Resource" path="res://data/styles/shattered.tres" id="2_style"]
+
+[resource]
+script = ExtResource("1_script")
+style = ExtResource("2_style")
+id = "finale"
+display_name = "The Broken Sanctum"
+subtitle = "Final Battle"
+kind = 3
+mission_index = 0
+intro_dialogue = "finale_intro"
+layout = "
+                 #########################
+                 #.......................#
+                 #.......................#
+                 #.......................#
+                 #.......................#
+                 #....##...........##....#
+ ############    #....##...........##....#
+ #o.........#    #.......................#
+ #..........#    #.......................#
+ #..........#    #.......................#
+ #..........######.......................#
+ #...S......D....D...........B...........#
+ #..........D....D.......................#
+ #..........######.......................#
+ #..........#    #.......................#
+ #..........#    #.......................#
+ #.........o#    #.......................#
+ ############    #.......................#
+                 #....##...........##....#
+                 #....##...........##....#
+                 #.......................#
+                 #.......................#
+                 #.......................#
+                 #.......................#
+                 #########################
+
+"
+enemy_name = ""
+boss_name = "The Oni"
+boss_health = 700.0
+boss_damage = 24.0
+boss_look = {"height": 150, "width": 70, "body": "#1a0d1c", "trim": "#d9a33a", "mask": "oni", "mask_color": "#b3201b", "crown": "spiked", "crown_color": "#e8c35a", "eyes": "#ffe600"}
+boss_intro_dialogue = "oni_final_intro"
+boss_defeat_dialogue = "oni_final_defeat"
+boss_power = ""
+boss_hope_on_kill = 0.0
+boss_is_oni = true
+portal_target = ""
+portal_requires_key = false
+portal_requires_boss = false

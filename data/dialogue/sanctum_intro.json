@@ -1,0 +1,24 @@
+{
+  "start": "s0",
+  "nodes": {
+    "s0": {
+      "speaker": "narrator",
+      "text": "The game begins in silence.",
+      "next": "s1"
+    },
+    "s1": {
+      "speaker": "narrator",
+      "text": "A young samurai kneels before his master - an old monk who speaks softly and commands unquestioning loyalty.",
+      "next": "s2"
+    },
+    "s2": {
+      "speaker": "narrator",
+      "text": "The Master's face is always hidden. So are the faces of everyone who serves him.",
+      "next": "s3"
+    },
+    "s3": {
+      "speaker": "narrator",
+      "text": "(Speak to the Master.  WASD move - E interact - J attack - SHIFT/SPACE dash)"
+    }
+  }
+}

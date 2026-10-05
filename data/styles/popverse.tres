@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="ComicStyle" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/comic_style.gd" id="1_script"]
+
+[resource]
+script = ExtResource("1_script")
+style_name = "Pop Multiverse"
+paper_color = Color(1.000, 0.965, 0.878, 1.0)
+ink_color = Color(0.071, 0.039, 0.122, 1.0)
+sky_top = Color(0.310, 0.820, 1.000, 1.0)
+sky_bottom = Color(1.000, 0.847, 0.310, 1.0)
+ground_color = Color(0.420, 0.169, 0.851, 1.0)
+backdrop_color = Color(1.000, 0.310, 0.639, 1.0)
+accent_color = Color(1.000, 0.180, 0.388, 1.0)
+backdrop = 3
+posterize_levels = 6
+halftone_strength = 0.6
+halftone_scale = 9.0
+halftone_angle = 0.26
+outline_strength = 1.8
+outline_threshold = 0.15
+misregistration = 3.0
+paper_grain = 0.15
+paper_tint = 0.25
+saturation = 1.4
+sfx_color = Color(1.000, 0.902, 0.000, 1.0)
+transition_caption = "MEANWHILE, IN ANOTHER DIMENSION..."

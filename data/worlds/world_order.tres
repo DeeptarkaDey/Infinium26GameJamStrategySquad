@@ -1,0 +1,88 @@
+[gd_resource type="Resource" script_class="WorldData" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/world_data.gd" id="1_script"]
+[ext_resource type="Resource" path="res://data/styles/ukiyoe.tres" id="2_style"]
+
+[resource]
+script = ExtResource("1_script")
+style = ExtResource("2_style")
+id = "world_order"
+display_name = "Ukiyo Shore"
+subtitle = "Mission 1 - The Order"
+kind = 1
+mission_index = 1
+intro_dialogue = "order_intro"
+layout = "
+ ##################                                          ##########
+ #o..............o#    ###############    ################   #o......o#
+ #................#    #.............#    #..............#####........#
+ #.....N....N.....#    #...........A.#    #..............D...D....C...#
+ #................######......E......#    #......#....A..D...D........#
+ #................D....D...##........######....E.........#####........#
+ #..S.............D....D...##........D....D..............#   #.......o#
+ #................######.............D....D..............#   ##########
+ #........$.......#    #.........E...######.......U......#
+ #................#    #.............#    #......#....A..#
+ #................#    #o...........o#    #..............#
+ #o...............#    #######DD######    #..............#
+ ##################          #..#         #######DD#######
+                             #..#               #..#
+                             #..#               #..#
+                       #######DD######          #..#
+       #############   #.............#    #######DD#######
+       #oo.........#   #.............#    #..............#
+       #...........#   #.............#    #............T.#
+       #...........#####....H....H...#    #.......E......#
+       #.....N.....D...D.............######...R..........#
+       #...........D...D.............D....D......##......#
+       #...........#####.............D....D......##......#
+       #...........#   #......E...F..######..............#
+       #..........o#   #..cc.........#    #..........R...#
+       ##DD#########   #.............#    #.....F........#
+        #..#           #####DD########    #..............#
+        #..#               #..#           #..............#
+   ######DD###             #..#           ########DD######
+   #.........#             #..#                  #..#
+   #.........#             #..#                  #..#
+   #..K......#         #####DD######             #..#
+   #......c..#         #...........#             #..#
+   #.........#         #.........T.#   ###########DD#########
+   #........o#         #...........#   #....................#
+   ###########         #...H.......#   #....................#
+                       #...........#   #....................#  ############
+                       #.......H...#   #....##........##....#  #..........#
+                       #...........#   #....##........##....#  #..........#
+                       #.....C...q.#   #....................####..........#
+                       #o..........#   #....................D..D..........#
+                       #############   #..........B.........D..D.....P....#
+                                       #....................####..........#
+                                       #....##........##....#  #..........#
+                                       #....##........##....#  #..........#
+                                       #....................#  ############
+                                       #....................#
+                                       #....................#
+                                       ######################
+
+"
+npcs = [{"name": "Hana", "dialogue": "order_hana", "look": {"height": 44, "width": 22, "body": "#d1462f", "trim": "#f3e3c3"}}, {"name": "Envoy of the Fox", "dialogue": "order_envoy", "look": {"height": 78, "body": "#3f2a3a", "trim": "#d9a33a", "mask": "kitsune", "mask_color": "#f2ece0", "crown": "lotus", "crown_color": "#e0b040", "eyes": "#ff3b2f"}}, {"name": "Old Sabu", "dialogue": "order_fisher", "look": {"height": 58, "body": "#4f7ca3", "trim": "#2f4e6e"}}]
+shopkeeper = {"name": "Wandering Peddler", "dialogue": "shop_generic", "look": {"height": 60, "body": "#7a5a3a", "mask": "kitsune", "crown": "eboshi"}}
+quest_items = [{"name": "Jun's Charm", "flag": "found_jun_charm", "requires": "hana_helped", "dialogue": "quest_jun_charm"}]
+shop_stock = PackedStringArray("reed_bow", "bamboo_staff", "wave_cutter", "tide_naginata")
+enemy_name = "Ink Wraith"
+enemy_health = 28.0
+enemy_damage = 10.0
+enemy_look = {"height": 58, "body": "#1b2233", "mask": "noh", "mask_color": "#d8d0c0", "crown": "none", "eyes": "#d1462f"}
+enemy_variants = {"archer": {"name": "Drowned Archer", "look": {"body": "#24384d", "mask": "kasa", "eyes": "#7fd0ff"}}, "bat": {"name": "Gull Shade", "look": {"body": "#3b4f63", "mask_color": "#f2ece0", "eyes": "#ffd27f"}}, "slime": {"name": "Brine Blob", "look": {"body": "#3d8fa8", "eyes": "#e8fbff"}}, "brute": {"name": "Kappa Bruiser", "look": {"body": "#2f5e3a", "mask_color": "#a8c890", "eyes": "#ffef7f"}}, "charger": {"name": "Tide Boar", "look": {"body": "#4a3b2f", "mask": "oni", "mask_color": "#d8d0c0", "eyes": "#ff6a3d"}}, "turret": {"name": "Sea Anemone", "look": {"body": "#b0466a", "crown_color": "#ff9ac0", "eyes": "#ffe08a"}}}
+gold_per_enemy = Vector2i(3, 8)
+weapon_drop_chance = 0.18
+drop_table = PackedStringArray()
+boss_name = "Kagami, Weaver of Tides"
+boss_health = 420.0
+boss_damage = 16.0
+boss_look = {"body": "#2f6e8e", "trim": "#7fd0ff", "crown": "none", "crown_color": "#f3e3c3", "eyes": "#fff3a0"}
+boss_intro_dialogue = "order_boss_intro"
+boss_defeat_dialogue = "order_boss_defeat"
+boss_power = "tide_step"
+boss_hope_on_kill = -5.0
+boss_form = "serpent"
+portal_target = "sanctum"

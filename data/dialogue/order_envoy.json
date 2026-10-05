@@ -1,0 +1,86 @@
+{
+  "variants": [
+    {
+      "requires": {
+        "flag": "boss_defeated_world_order"
+      },
+      "start": "post"
+    },
+    {
+      "requires": {
+        "flag": [
+          "order_envoy_met",
+          "hana_helped"
+        ],
+        "not_flag": "envoy_order_obeyed"
+      },
+      "start": "strays"
+    },
+    {
+      "requires": {
+        "flag": "order_envoy_met"
+      },
+      "start": "again"
+    }
+  ],
+  "start": "e1",
+  "nodes": {
+    "e1": {
+      "speaker": "envoy_fox",
+      "text": "Ahh, the Master's little blade. How sharp you've grown. We are his eyes on this shore.",
+      "effects": {
+        "set_flag": "order_envoy_met"
+      },
+      "next": "e2"
+    },
+    "e2": {
+      "speaker": "envoy_fox",
+      "text": "The villagers will weep at you. Weeping is a trick. Shall I teach you how to stop hearing it?",
+      "choices": [
+        {
+          "text": "Teach me.",
+          "next": "e_obey",
+          "effects": {
+            "hope": -8,
+            "set_flag": "envoy_order_obeyed"
+          }
+        },
+        {
+          "text": "I'll listen to whoever I want.",
+          "next": "e_defy",
+          "effects": {
+            "hope": 4
+          }
+        },
+        {
+          "text": "Why do you wear a mask, fox?",
+          "next": "e_mask"
+        }
+      ]
+    },
+    "e_obey": {
+      "speaker": "envoy_fox",
+      "text": "Good. Think only of the Master's warmth. ...Do you feel it? No? You will."
+    },
+    "e_defy": {
+      "speaker": "envoy_fox",
+      "text": "Hmm. The Master will be... interested to hear that."
+    },
+    "e_mask": {
+      "speaker": "envoy_fox",
+      "text": "So the light does not see us, little blade. The light remembers faces. Run along."
+    },
+    "strays": {
+      "speaker": "envoy_fox",
+      "text": "Feeding strays and hunting drowned fathers? The Master did not send you to be kind, little blade. Kindness leaks."
+    },
+    "again": {
+      "speaker": "envoy_fox",
+      "text": "Go on. Your target waits past the south-eastern gates. Follow the sound of the surf."
+    },
+    "post": {
+      "speaker": "envoy_fox",
+      "text": "Beautifully done. The Master's hands are warmer already. ...Don't look at the water, little blade. It's only rising."
+    }
+  }
+}

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="PowerData" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/power_data.gd" id="1_script"]
+
+[resource]
+script = ExtResource("1_script")
+id = "panel_skip"
+display_name = "Panel Skip"
+description = "Your echo's trick: dash through the gutter between panels, untouchable."
+source_world = "world_truth"
+kind = 0
+cooldown = 0.0
+stat_mods = {"dash_invuln": 1, "dash_length": 0.6, "damage_mult": 0.1}
+color = Color(1.000, 0.373, 0.690, 1.0)

@@ -1,0 +1,14 @@
+{
+  "start": "s0",
+  "nodes": {
+    "s0": {
+      "speaker": "narrator",
+      "text": "The Temple of the Veiled Moon had cracked open like an egg. Panels from every world drifted in the air - shore, city, metro - all of them dimming.",
+      "next": "s1"
+    },
+    "s1": {
+      "speaker": "monk",
+      "text": "You came back. Of course you did. I raised you to come back."
+    }
+  }
+}

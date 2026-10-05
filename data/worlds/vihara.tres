@@ -1,0 +1,43 @@
+[gd_resource type="Resource" script_class="WorldData" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/world_data.gd" id="1_script"]
+[ext_resource type="Resource" path="res://data/styles/vihara_wash.tres" id="2_style"]
+
+[resource]
+script = ExtResource("1_script")
+style = ExtResource("2_style")
+id = "vihara"
+display_name = "The Old Vihara"
+subtitle = "Escape - Sanctuary"
+kind = 2
+mission_index = 0
+intro_dialogue = "vihara_intro"
+layout = "
+                    ####################
+                    #o.................#
+ ###############    #..................#
+ #............o#    #..................#
+ #.............#    #...#..........#...#
+ #.............#    #..................#
+ #........c....#    #........N.........#
+ #.............######..................#
+ #.............D....D..................#
+ #..S..........D....D..................#
+ #.............######..................#
+ #.............#    #..................#
+ #.............#    #..................#
+ #.............#    #..................#
+ #............o#    #.............P....#
+ ###############    #..................#
+                    #...#..............#
+                    #..................#
+                    #..................#
+                    #.................o#
+                    ####################
+
+"
+npcs = [{"name": "The Old Bhikkhu", "dialogue": "vihara_monk", "look": {"height": 80, "body": "#e08a2e", "trim": "#ffcf4a", "crown": "halo", "crown_color": "#ffe9a0"}}]
+portal_target = "finale"
+portal_requires_key = false
+portal_requires_boss = false
+portal_requires_flag = "received_sacred_light"

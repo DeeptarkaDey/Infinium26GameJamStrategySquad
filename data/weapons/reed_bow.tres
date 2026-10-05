@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="WeaponData" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/weapon_data.gd" id="1_script"]
+
+[resource]
+script = ExtResource("1_script")
+id = "reed_bow"
+display_name = "Reed Bow"
+description = "A fisherman's bow strung with net cord. Keeps the tide at arm's length."
+kind = 5
+rarity = 0
+damage = 9.0
+attack_cooldown = 0.42
+reach = 460.0
+knockback = 120.0
+price = 35
+drop_weight = 1.0
+sfx_word = "THWIP!"
+blade_color = Color(0.62, 0.52, 0.32, 1.0)
+element = ""
+world_tags = PackedStringArray()

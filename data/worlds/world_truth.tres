@@ -1,0 +1,96 @@
+[gd_resource type="Resource" script_class="WorldData" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/world_data.gd" id="1_script"]
+[ext_resource type="Resource" path="res://data/styles/popverse.tres" id="2_style"]
+
+[resource]
+script = ExtResource("1_script")
+style = ExtResource("2_style")
+id = "world_truth"
+display_name = "Prism Metro"
+subtitle = "Mission 3 - The Truth"
+kind = 1
+mission_index = 3
+intro_dialogue = "truth_intro"
+layout = "
+ ##################
+ #o..............o#    ################     ################     ############
+ #................#    #..............#     #..............#     #..........#
+ #.....N....N.....#    #.......A....T.#     #..............#     #.T......T.#
+ #................######..R...........#     #..A........A..#######.....K....#
+ #................D....D..............#######......##......D.....D..........#
+ #................D....D..............D.....D..............D.....D..........#
+ #..S.............######.....####.....D.....D..............#######..........#
+ #................#    #..............#######......H.......#     #..c..E....#
+ #........$.......#    #...........R..#     #..............#     #..........#
+ #................#    #..............#     #...E......E...#     ############
+ #................#    #..............#     #..............#
+ #...............o#    #######DD#######     ################
+ ######DD##########          #..#
+      #..#                   #..#
+      #..#                   #..#
+      #..#                   #..#           ######################
+      #..#                   #..#           #....................#
+ ######DD########      #######DD######      #....................#
+ #..............#      #.............#      #....................#
+ #..............#      #.............#      #....##........##....#     ##############
+ #...E......E...#      #...N.........#      #....##........##....#     #............#
+ #..............########.........E...########....................#     #............#
+ #......##......D......D.............D......D....................#     #............#
+ #......##......D......D.............D......D....................#######............#
+ #...........F..########.............########..........B.........D.....D......P.....#
+ #..............#      #......H...H..#      #....................D.....D............#
+ #......A.......#      #.c...........#      #....................#######............#
+ #..............#      #.............#      #....##........##....#     #............#
+ #######DD#######      #######DD######      #....##........##....#     #............#
+       #..#                  #..#           #....................#     ##############
+       #..#                  #..#           #....................#
+       #..#                  #..#           #....................#
+       #..#                  #..#           ######################
+       #..#                  #..#
+ #######DD#######      #######DD#######
+ #..............#      #..............#
+ #..............#      #...........A..#
+ #..F........F..#      #..R...........#     ##############
+ #..............########..............#     #............#
+ #......U.......D......D......##......#     #............#
+ #..#........#..D......D......##......#######..F......F..#
+ #..............########..............D.....D............#
+ #..............#      #..........U...D.....D......C.....#
+ #......T.......#      #....E.........#######..........q.#
+ #..............#      #..............#     #............#
+ ######DD########      #..............#     #o..........o#
+      #..#             ################     ##############
+      #..#
+      #..#
+   ####DD#####
+   #o.......o#
+   #.........#
+   #....C....#
+   #.........#
+   #.........#
+   #........o#
+   ###########
+"
+npcs = [{"name": "Aki", "dialogue": "truth_aki", "look": {"height": 44, "width": 22, "body": "#ffd84f", "trim": "#ff2e63"}}, {"name": "Envoy of the Horn", "dialogue": "truth_envoy", "look": {"height": 78, "body": "#2a0f2e", "trim": "#d9a33a", "mask": "oni", "mask_color": "#ff2e63", "crown": "spiked", "crown_color": "#e0b040", "eyes": "#ff3b2f"}}, {"name": "Grandma Iro", "dialogue": "truth_iro", "look": {"height": 54, "body": "#6b2bd9", "trim": "#4fd1ff"}}]
+shopkeeper = {"name": "Glitch Vendor", "dialogue": "shop_generic", "look": {"height": 60, "body": "#ff4fa3", "mask": "sun", "crown": "halo"}}
+quest_items = [{"name": "the Last Page", "flag": "found_last_page", "requires": "aki_page_quest", "dialogue": "quest_last_page"}]
+shop_stock = PackedStringArray("ink_kama", "halftone_blade", "noir_odachi", "dawn_edge")
+enemy_name = "Halftone Ghoul"
+enemy_health = 52.0
+enemy_damage = 16.0
+enemy_look = {"height": 62, "body": "#120a1f", "mask": "kitsune", "mask_color": "#4fd1ff", "crown": "spiked", "eyes": "#ffe600"}
+enemy_variants = {"archer": {"name": "Prism Archer", "look": {"body": "#3a1fd9", "mask": "kitsune", "mask_color": "#ffe14f", "eyes": "#ff2e63"}}, "bat": {"name": "Pixel Bat", "look": {"body": "#ff4fa3", "mask_color": "#4fd1ff", "eyes": "#ffffff"}}, "slime": {"name": "Ben-Day Blob", "look": {"body": "#ffd84f", "eyes": "#ff2e63"}}, "brute": {"name": "Panel Golem", "look": {"body": "#6b2bd9", "mask_color": "#ff4fa3", "eyes": "#4fd1ff"}}, "charger": {"name": "Speedline Runner", "look": {"body": "#ff2e63", "mask": "noh", "mask_color": "#ffffff", "eyes": "#ffd84f"}}, "turret": {"name": "Billboard Eye", "look": {"body": "#4fd1ff", "crown_color": "#ff4fa3", "eyes": "#ff2e63"}}}
+gold_per_enemy = Vector2i(7, 14)
+weapon_drop_chance = 0.2
+drop_table = PackedStringArray()
+boss_name = "The Echo"
+boss_health = 480.0
+boss_damage = 22.0
+boss_look = {"body": "#5a2bd9", "trim": "#ff2e63", "crown": "none", "crown_color": "#bfe8ff", "eyes": "#4fd1ff"}
+boss_intro_dialogue = "truth_boss_intro"
+boss_defeat_dialogue = "truth_boss_defeat"
+boss_power = "panel_skip"
+boss_hope_on_kill = -6.0
+boss_form = "eye"
+portal_target = "sanctum"

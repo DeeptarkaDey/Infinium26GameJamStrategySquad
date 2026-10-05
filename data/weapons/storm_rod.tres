@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="WeaponData" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/weapon_data.gd" id="1_script"]
+
+[resource]
+script = ExtResource("1_script")
+id = "storm_rod"
+display_name = "Storm Rod"
+description = "A lantern pole that drank a thunderstorm. Its bolts jump between foes."
+kind = 4
+rarity = 2
+damage = 14.0
+attack_cooldown = 0.36
+reach = 360.0
+knockback = 140.0
+price = 210
+drop_weight = 0.7
+sfx_word = "ZZAP!"
+blade_color = Color(1.0, 0.92, 0.3, 1.0)
+element = "shock"
+world_tags = PackedStringArray("world_doubt", "world_truth")

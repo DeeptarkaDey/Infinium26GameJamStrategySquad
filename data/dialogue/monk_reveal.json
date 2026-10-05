@@ -1,0 +1,71 @@
+{
+  "start": "r1",
+  "nodes": {
+    "r1": {
+      "speaker": "monk",
+      "text": "Three lights. Three keys. Kneel.",
+      "next": "r2"
+    },
+    "r2": {
+      "speaker": "narrator",
+      "text": "The Master's hands were shaking. Not with age. With hunger.",
+      "next": "r3"
+    },
+    "r3": {
+      "speaker": "monk",
+      "text": "Eighteen winters I waited. Banished from the light with my whole order, cursed to rot in this temple between pages. I could not cross. But a child raised here... could.",
+      "next": "r4"
+    },
+    "r4": {
+      "speaker": "monk",
+      "text": "The 'thieves' you cut down were wardens. Each world's protector. Their light kept the dark out. Kept ME out.",
+      "effects": {
+        "set_flag": "monk_revealed"
+      },
+      "next": "r5"
+    },
+    "r5": {
+      "speaker": "narrator",
+      "text": "The noh mask cracked down the middle. Behind it, something red, horned, and crowned in gold.",
+      "next": "r6"
+    },
+    "r6": {
+      "speaker": "monk",
+      "text": "The seal is broken. Thank you, my son.",
+      "choices": [
+        {
+          "text": "You used me.",
+          "next": "r_end"
+        },
+        {
+          "text": "Was any of it real? The years? My name?",
+          "next": "r_real"
+        },
+        {
+          "text": "Then I am yours. I have nothing else.",
+          "next": "r_end",
+          "effects": {
+            "set_flag": "gave_in",
+            "hope": -5
+          },
+          "requires": {
+            "hope_max": 20
+          }
+        }
+      ]
+    },
+    "r_real": {
+      "speaker": "monk",
+      "text": "Real enough to sharpen. That is all a blade needs.",
+      "next": "r_end"
+    },
+    "r_end": {
+      "speaker": "monk",
+      "text": "Now give me the last light. Yours.",
+      "text_low_hope": "There is so little left in you. It will barely hurt.",
+      "effects": {
+        "action": "reveal_branch"
+      }
+    }
+  }
+}

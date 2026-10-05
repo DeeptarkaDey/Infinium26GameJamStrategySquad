@@ -1,0 +1,25 @@
+{
+  "start": "s0",
+  "nodes": {
+    "s0": {
+      "speaker": "narrator",
+      "text": "The great moth folded its wings. One lantern slipped from its silk and rolled across the stones. The flame did not go out. It rose, and fled into the dark - toward a temple between pages.",
+      "next": "s1"
+    },
+    "s1": {
+      "speaker": "monk_voice",
+      "text": "Two. You make me proud.",
+      "next": "s2"
+    },
+    "s2": {
+      "speaker": "lamplighter",
+      "text": "Walk... them... home...",
+      "text_low_hope": "...Don't let him... put you out too...",
+      "next": "s3"
+    },
+    "s3": {
+      "speaker": "narrator",
+      "text": "His flame curls around your hand and stays.  (POWER: LANTERN FLARE - press Q)"
+    }
+  }
+}

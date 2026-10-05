@@ -1,0 +1,124 @@
+{
+  "variants": [
+    {
+      "requires": {
+        "worlds_done_min": 2,
+        "flag": "debrief_2"
+      },
+      "start": "repeat"
+    },
+    {
+      "requires": {
+        "worlds_done_min": 2
+      },
+      "start": "second"
+    },
+    {
+      "requires": {
+        "flag": "debrief_1"
+      },
+      "start": "repeat"
+    }
+  ],
+  "start": "first",
+  "nodes": {
+    "first": {
+      "speaker": "monk",
+      "text": "You brought it. I felt it arrive... warm, like a lantern held to cold hands. Tell me - did you hesitate when she fell?",
+      "choices": [
+        {
+          "text": "No, Master.",
+          "next": "f_obey",
+          "effects": {
+            "hope": -3,
+            "set_flag": "debrief_1"
+          }
+        },
+        {
+          "text": "She didn't seem dangerous. The whole shore loved her.",
+          "next": "f_doubt",
+          "effects": {
+            "hope": 4,
+            "set_flag": [
+              "debrief_1",
+              "doubted_once"
+            ]
+          }
+        }
+      ]
+    },
+    "f_obey": {
+      "speaker": "monk",
+      "text": "Good. Hesitation is a crack, and light leaks out of cracks.",
+      "next": "f_next"
+    },
+    "f_doubt": {
+      "speaker": "monk",
+      "text": "...Love is a mask too, child. Remember that.",
+      "next": "f_next"
+    },
+    "f_next": {
+      "speaker": "monk",
+      "text": "The next page waits. Go.",
+      "effects": {
+        "action": "teleport_next"
+      }
+    },
+    "second": {
+      "speaker": "monk",
+      "text": "Two lights. The temple feels warmer. Do you feel it too?",
+      "choices": [
+        {
+          "text": "I feel colder, Master.",
+          "next": "s2",
+          "effects": {
+            "hope": 3,
+            "set_flag": "debrief_2"
+          }
+        },
+        {
+          "text": "I feel nothing.",
+          "next": "s2",
+          "effects": {
+            "hope": -4,
+            "set_flag": "debrief_2"
+          }
+        },
+        {
+          "text": "Why does the light go into your hands - and not back to our world?",
+          "next": "s_ask",
+          "effects": {
+            "hope": 5,
+            "set_flag": [
+              "debrief_2",
+              "asked_light"
+            ]
+          },
+          "requires": {
+            "flag": "doubted_once"
+          }
+        }
+      ]
+    },
+    "s_ask": {
+      "speaker": "monk",
+      "text": "Because I am the vessel our world deserves. ...Do not ask again.",
+      "next": "s2"
+    },
+    "s2": {
+      "speaker": "monk",
+      "text": "One more. The brightest. Bring it to me, and you will finally see my face.",
+      "effects": {
+        "action": "teleport_next"
+      }
+    },
+    "repeat": {
+      "speaker": "monk",
+      "text": "The gate is open.",
+      "text_low_hope": "Your light dims, child. Good. It was always too heavy for you.",
+      "effects": {
+        "action": "teleport_next"
+      }
+    }
+  }
+}

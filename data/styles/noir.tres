@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="ComicStyle" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/comic_style.gd" id="1_script"]
+
+[resource]
+script = ExtResource("1_script")
+style_name = "Pulp Noir"
+paper_color = Color(0.910, 0.886, 0.839, 1.0)
+ink_color = Color(0.020, 0.020, 0.020, 1.0)
+sky_top = Color(0.047, 0.047, 0.059, 1.0)
+sky_bottom = Color(0.141, 0.141, 0.165, 1.0)
+ground_color = Color(0.490, 0.490, 0.525, 1.0)
+backdrop_color = Color(0.239, 0.239, 0.275, 1.0)
+accent_color = Color(0.816, 0.110, 0.110, 1.0)
+backdrop = 2
+posterize_levels = 4
+halftone_strength = 0.7
+halftone_scale = 5.0
+hatching = 0.8
+outline_strength = 2.0
+outline_threshold = 0.14
+paper_grain = 0.3
+paper_tint = 0.3
+saturation = 1.0
+monochrome = 1.0
+accent_keep = 1.0
+sfx_color = Color(0.816, 0.110, 0.110, 1.0)
+transition_caption = "IT WAS A CITY THAT NEVER SAW DAWN..."

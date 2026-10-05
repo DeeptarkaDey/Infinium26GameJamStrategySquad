@@ -1,0 +1,19 @@
+{
+  "start": "s0",
+  "nodes": {
+    "s0": {
+      "speaker": "narrator",
+      "text": "But there was still enough light in him to see the mask for what it was.",
+      "next": "s1"
+    },
+    "s1": {
+      "speaker": "samurai",
+      "text": "No.",
+      "next": "s2"
+    },
+    "s2": {
+      "speaker": "narrator",
+      "text": "He ran - through the gate, through the white gutters between pages, until the ink ran out beneath his feet."
+    }
+  }
+}

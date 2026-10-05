@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="ComicStyle" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/comic_style.gd" id="1_script"]
+
+[resource]
+script = ExtResource("1_script")
+style_name = "Sumi Ink"
+paper_color = Color(0.937, 0.902, 0.824, 1.0)
+ink_color = Color(0.071, 0.059, 0.071, 1.0)
+sky_top = Color(0.851, 0.816, 0.749, 1.0)
+sky_bottom = Color(0.945, 0.918, 0.859, 1.0)
+ground_color = Color(0.227, 0.204, 0.200, 1.0)
+backdrop_color = Color(0.561, 0.529, 0.486, 1.0)
+accent_color = Color(0.702, 0.125, 0.106, 1.0)
+backdrop = 0
+posterize_levels = 5
+halftone_strength = 0.2
+halftone_scale = 5.0
+hatching = 0.5
+outline_strength = 1.4
+outline_threshold = 0.18
+paper_grain = 0.35
+paper_tint = 0.6
+saturation = 0.9
+monochrome = 0.85
+accent_keep = 0.9
+sfx_color = Color(0.702, 0.125, 0.106, 1.0)
+transition_caption = "THE TEMPLE OF THE VEILED MOON"

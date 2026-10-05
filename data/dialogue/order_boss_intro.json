@@ -1,0 +1,44 @@
+{
+  "start": "arrive",
+  "nodes": {
+    "arrive": {
+      "speaker": "narrator",
+      "text": "The floor ripples like water. Something vast uncoils from beneath it - a sea serpent crowned in horn, eyes like drowned lanterns.",
+      "next": "b1"
+    },
+    "b1": {
+      "speaker": "kagami",
+      "text": "...So he finally sent someone. And so young.",
+      "next": "b2"
+    },
+    "b2": {
+      "speaker": "kagami",
+      "text": "I have held this tide for three hundred years, child. Behind it waits something that wears a holy face and eats the light of worlds.",
+      "choices": [
+        {
+          "text": "Lies. Defend yourself.",
+          "next": "b_fight",
+          "effects": {
+            "hope": -3
+          }
+        },
+        {
+          "text": "Then why does my master want you dead?",
+          "next": "b_why",
+          "effects": {
+            "hope": 3
+          }
+        }
+      ]
+    },
+    "b_why": {
+      "speaker": "kagami",
+      "text": "You already know. You just haven't let yourself hear it.",
+      "next": "b_fight"
+    },
+    "b_fight": {
+      "speaker": "kagami",
+      "text": "If I must fall, I will not fall lying down. Come."
+    }
+  }
+}

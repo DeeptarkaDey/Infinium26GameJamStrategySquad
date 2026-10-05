@@ -1,0 +1,19 @@
+{
+  "start": "s0",
+  "nodes": {
+    "s0": {
+      "speaker": "monk_voice",
+      "text": "Lantern City. Its warden is the Lamplighter. He steals the souls of the dead and burns them in his lamps.",
+      "next": "s1"
+    },
+    "s1": {
+      "speaker": "monk_voice",
+      "text": "Find the key. Then put out his light.",
+      "next": "s2"
+    },
+    "s2": {
+      "speaker": "narrator",
+      "text": "MISSION 2 - THE DOUBT."
+    }
+  }
+}

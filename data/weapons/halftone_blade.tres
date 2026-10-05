@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="WeaponData" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/weapon_data.gd" id="1_script"]
+
+[resource]
+script = ExtResource("1_script")
+id = "halftone_blade"
+display_name = "Halftone Blade"
+description = "Made of a million tiny dots that agree to be a sword."
+kind = 0
+rarity = 2
+damage = 20.0
+attack_cooldown = 0.34
+reach = 70.0
+knockback = 260.0
+price = 200
+drop_weight = 0.8
+sfx_word = "BZZT!"
+blade_color = Color(1.000, 0.310, 0.639, 1.0)
+world_tags = PackedStringArray("world_truth")

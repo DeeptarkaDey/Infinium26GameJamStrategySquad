@@ -1,0 +1,19 @@
+{
+  "start": "s0",
+  "nodes": {
+    "s0": {
+      "speaker": "monk_voice",
+      "text": "Ukiyo Shore. A floating world of printed waves. Its warden is Kagami, the Weaver of Tides. She drowns fishing boats for sport.",
+      "next": "s1"
+    },
+    "s1": {
+      "speaker": "monk_voice",
+      "text": "Find this world's key - without it, the page will not let you leave. Then find her. Do not let her speak.",
+      "next": "s2"
+    },
+    "s2": {
+      "speaker": "narrator",
+      "text": "MISSION 1 - THE ORDER."
+    }
+  }
+}

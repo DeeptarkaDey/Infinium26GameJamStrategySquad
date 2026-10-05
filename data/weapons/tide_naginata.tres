@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="WeaponData" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/weapon_data.gd" id="1_script"]
+
+[resource]
+script = ExtResource("1_script")
+id = "tide_naginata"
+display_name = "Tide Naginata"
+description = "A polearm that pulls enemies like an undertow."
+kind = 1
+rarity = 2
+damage = 18.0
+attack_cooldown = 0.55
+reach = 100.0
+knockback = 320.0
+price = 85
+drop_weight = 0.8
+sfx_word = "SWOOSH!"
+blade_color = Color(0.247, 0.431, 0.604, 1.0)
+world_tags = PackedStringArray("world_order")

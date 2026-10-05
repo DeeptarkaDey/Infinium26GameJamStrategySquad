@@ -1,0 +1,93 @@
+{
+  "variants": [
+    {
+      "requires": {
+        "flag": "boss_defeated_world_truth"
+      },
+      "start": "post"
+    },
+    {
+      "requires": {
+        "flag": "truth_envoy_met"
+      },
+      "start": "again"
+    }
+  ],
+  "start": "e1",
+  "nodes": {
+    "e1": {
+      "speaker": "envoy_horn",
+      "text": "The last page, little blade. Your hands are so steady now. He will be proud.",
+      "effects": {
+        "set_flag": "truth_envoy_met"
+      },
+      "next": "e2"
+    },
+    "e2": {
+      "speaker": "envoy_horn",
+      "text": "Do you know what waits at the end? Yourself. Kill it quickly. Don't look at its face.",
+      "choices": [
+        {
+          "text": "I won't look.",
+          "next": "e_obey",
+          "effects": {
+            "hope": -6
+          }
+        },
+        {
+          "text": "Why would it have my face?",
+          "next": "e_why",
+          "effects": {
+            "hope": 2,
+            "set_flag": "clue_echo"
+          }
+        },
+        {
+          "text": "You're not his envoys. You're what's left of the others he raised.",
+          "next": "e_truth",
+          "effects": {
+            "hope": 6
+          },
+          "requires": {
+            "flag": "asked_light"
+          }
+        },
+        {
+          "text": "I saw the last page. I know what's under his mask.",
+          "next": "e_page",
+          "effects": {
+            "hope": 6
+          },
+          "requires": {
+            "flag": "saw_last_page",
+            "not_flag": "asked_light"
+          }
+        }
+      ]
+    },
+    "e_obey": {
+      "speaker": "envoy_horn",
+      "text": "Good. Faces are such heavy things to carry."
+    },
+    "e_why": {
+      "speaker": "envoy_horn",
+      "text": "Every telling has a hero. He raised one of you in every world. Only one gets to finish the book."
+    },
+    "e_truth": {
+      "speaker": "envoy_horn",
+      "text": "...Clever. Too late, but clever. We wear our masks so he cannot see us cry."
+    },
+    "e_page": {
+      "speaker": "envoy_horn",
+      "text": "...Then you know what we are, too. What's left of the others he raised. We wear our masks so he cannot see us cry."
+    },
+    "again": {
+      "speaker": "envoy_horn",
+      "text": "Don't look at its face."
+    },
+    "post": {
+      "speaker": "envoy_horn",
+      "text": "There. Now you are the only one left, little blade. He'll want you home. Go on... go home."
+    }
+  }
+}

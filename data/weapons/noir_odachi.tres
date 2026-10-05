@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="WeaponData" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/weapon_data.gd" id="1_script"]
+
+[resource]
+script = ExtResource("1_script")
+id = "noir_odachi"
+display_name = "Noir Odachi"
+description = "Heavy as a guilty conscience."
+kind = 2
+rarity = 2
+damage = 26.0
+attack_cooldown = 0.75
+reach = 104.0
+knockback = 380.0
+price = 190
+drop_weight = 0.7
+sfx_word = "KRRSHH!"
+blade_color = Color(0.816, 0.816, 0.816, 1.0)
+world_tags = PackedStringArray("world_doubt")

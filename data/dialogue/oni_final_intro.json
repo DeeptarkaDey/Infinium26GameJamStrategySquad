@@ -1,0 +1,51 @@
+{
+  "start": "o1",
+  "nodes": {
+    "o1": {
+      "speaker": "monk",
+      "text": "Look at me, child. You always wanted to see my face.",
+      "next": "o2"
+    },
+    "o2": {
+      "speaker": "narrator",
+      "text": "Beneath the cracked noh mask, another mask. Red. Horned. Crowned in gold. Beneath that - nothing he would ever show.",
+      "choices": [
+        {
+          "text": "I see you.",
+          "next": "o_f",
+          "effects": {
+            "hope": 3
+          }
+        },
+        {
+          "text": "You were the only father I had.",
+          "next": "o_father"
+        },
+        {
+          "text": "...Take it. Take the rest.",
+          "next": "o_give",
+          "requires": {
+            "hope_max": 20
+          }
+        }
+      ]
+    },
+    "o_give": {
+      "speaker": "narrator",
+      "text": "No. Not again. Somewhere behind you, an old man in orange robes is holding up a lamp.",
+      "effects": {
+        "hope": 10
+      },
+      "next": "o_f"
+    },
+    "o_father": {
+      "speaker": "monk",
+      "text": "And I was a good one. I fed you. I sharpened you. What is love, if not that?",
+      "next": "o_f"
+    },
+    "o_f": {
+      "speaker": "monk",
+      "text": "Come, then. Let us see whose light this world believes in.  (Only SACRED LIGHT - Q - truly wounds him.)"
+    }
+  }
+}

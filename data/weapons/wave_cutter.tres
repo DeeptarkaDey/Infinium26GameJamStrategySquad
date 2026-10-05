@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="WeaponData" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/weapon_data.gd" id="1_script"]
+
+[resource]
+script = ExtResource("1_script")
+id = "wave_cutter"
+display_name = "Wave Cutter"
+description = "Folded like the crest of a printed wave."
+kind = 0
+rarity = 1
+damage = 14.0
+attack_cooldown = 0.4
+reach = 64.0
+knockback = 240.0
+price = 60
+drop_weight = 1.0
+sfx_word = "SHHHA!"
+blade_color = Color(0.498, 0.702, 0.835, 1.0)
+world_tags = PackedStringArray("world_order")

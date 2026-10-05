@@ -1,0 +1,139 @@
+{
+  "variants": [
+    {
+      "requires": {
+        "flag": "boss_defeated_world_order"
+      },
+      "start": "post"
+    },
+    {
+      "requires": {
+        "flag": "found_jun_charm",
+        "not_flag": "hana_charm_returned"
+      },
+      "start": "charm"
+    },
+    {
+      "requires": {
+        "flag": [
+          "sabu_met",
+          "hana_helped"
+        ],
+        "not_flag": "sabu_told_jun"
+      },
+      "start": "jun"
+    },
+    {
+      "requires": {
+        "flag": "sabu_met"
+      },
+      "start": "again"
+    }
+  ],
+  "start": "f1",
+  "nodes": {
+    "f1": {
+      "speaker": "sabu",
+      "text": "A samurai from off the page? Hah. Haven't seen one of you since the ink was wet.",
+      "effects": {
+        "set_flag": "sabu_met"
+      },
+      "next": "f2"
+    },
+    "f2": {
+      "speaker": "sabu",
+      "text": "You're here for the Weaver. Don't look surprised - the fox told everyone. He's been smiling about it for days.",
+      "next": "f3"
+    },
+    "f3": {
+      "speaker": "sabu",
+      "text": "Every night she stands in the surf and holds back the black water. Without her this shore drowns in a week. Whoever sent you knows that.",
+      "choices": [
+        {
+          "text": "Hana's looking for her papa, Jun. Have you seen him?",
+          "next": "jun",
+          "requires": {
+            "flag": "hana_helped"
+          }
+        },
+        {
+          "text": "My master says she drowns boats for sport.",
+          "next": "f_ans",
+          "effects": {
+            "set_flag": "clue_order"
+          }
+        },
+        {
+          "text": "Is there another way off this shore?",
+          "next": "f_way",
+          "effects": {
+            "hope": 3,
+            "set_flag": "clue_order"
+          }
+        }
+      ]
+    },
+    "f_ans": {
+      "speaker": "sabu",
+      "text": "Your master's never seen the sea, I'd wager."
+    },
+    "f_way": {
+      "speaker": "sabu",
+      "text": "There's an old shrine at the back of this net store, behind the drying racks. They say the shore's key rests there, for folk who lost theirs."
+    },
+    "jun": {
+      "speaker": "sabu",
+      "text": "Jun. Best net-man on the shore and the worst singer in three tellings. He rowed out toward the cove the night the water turned black. Said he'd seen a light in it.",
+      "next": "jun2"
+    },
+    "jun2": {
+      "speaker": "sabu",
+      "text": "The cove's south of the square where the blobs nest. If the tide took him, it left something there. It always does.",
+      "effects": {
+        "set_flag": [
+          "sabu_told_jun",
+          "clue_order"
+        ]
+      }
+    },
+    "charm": {
+      "speaker": "sabu",
+      "text": "That's Jun's charm. ...Take it to the girl. Tell her whatever you can live with. She'll know the truth eventually - kids always do."
+    },
+    "again": {
+      "speaker": "sabu",
+      "text": "The shrine's at the back if you need the shore's key. And mind the fox. He smiles too much for someone with no face."
+    },
+    "post": {
+      "speaker": "sabu",
+      "text": "Water's at my ankles in my own store. Kagami held it back three hundred years, and you held a sword for a few minutes.",
+      "choices": [
+        {
+          "text": "I'm sorry.",
+          "next": "post_sorry",
+          "effects": {
+            "hope": 2
+          }
+        },
+        {
+          "text": "Who sent me, Sabu? What did he want with her light?",
+          "next": "post_who",
+          "requires": {
+            "flag": "clue_order"
+          },
+          "effects": {
+            "hope": 2
+          }
+        }
+      ]
+    },
+    "post_sorry": {
+      "speaker": "sabu",
+      "text": "Sorry doesn't bail water. ...But it's a start. Go and see the girl before you go."
+    },
+    "post_who": {
+      "speaker": "sabu",
+      "text": "Something that eats light the way the sea eats boats. Something that can't make its own. Find out what's under that mask, samurai."
+    }
+  }
+}

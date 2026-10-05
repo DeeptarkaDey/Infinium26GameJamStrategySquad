@@ -1,0 +1,36 @@
+{
+  "variants": [
+    {
+      "requires": {
+        "worlds_done_min": 2
+      },
+      "start": "late"
+    }
+  ],
+  "start": "a1",
+  "nodes": {
+    "a1": {
+      "speaker": "acolyte",
+      "text": "The Master's light is very beautiful. Have you ever seen it? ...No. None of us have.",
+      "choices": [
+        {
+          "text": "What is under your veil?",
+          "next": "a2"
+        },
+        {
+          "text": "Leave me be.",
+          "next": "end"
+        }
+      ]
+    },
+    "a2": {
+      "speaker": "acolyte",
+      "text": "A face, once. He took it for safekeeping. He keeps all our faces.",
+      "text_low_hope": "Soon you will not need yours either."
+    },
+    "late": {
+      "speaker": "acolyte",
+      "text": "The temple hums now. One more light and the door opens. I cannot remember which side of the door I am meant to be on."
+    }
+  }
+}

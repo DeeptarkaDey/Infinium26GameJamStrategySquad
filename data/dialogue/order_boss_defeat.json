@@ -1,0 +1,24 @@
+{
+  "start": "s0",
+  "nodes": {
+    "s0": {
+      "speaker": "narrator",
+      "text": "As the great serpent sank, coil by coil, a strange light escaped her body. It rose... and drifted away, as if pulled by unseen hands.",
+      "next": "s1"
+    },
+    "s1": {
+      "speaker": "monk_voice",
+      "text": "Yes... yes. Bring it to me.",
+      "next": "s2"
+    },
+    "s2": {
+      "speaker": "kagami",
+      "text": "Tell the little one... the tide will hold... a while longer.",
+      "next": "s3"
+    },
+    "s3": {
+      "speaker": "narrator",
+      "text": "Something of her stays with you. Your feet remember the waves.  (POWER: TIDE STEP - dash twice in a row)"
+    }
+  }
+}

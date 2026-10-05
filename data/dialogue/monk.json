@@ -1,0 +1,104 @@
+{
+  "variants": [
+    {
+      "requires": {
+        "worlds_done_min": 3
+      },
+      "use": "monk_reveal"
+    },
+    {
+      "requires": {
+        "worlds_done_min": 1
+      },
+      "use": "monk_between"
+    },
+    {
+      "requires": {
+        "flag": "monk_briefed"
+      },
+      "start": "repeat"
+    }
+  ],
+  "start": "n1",
+  "nodes": {
+    "n1": {
+      "speaker": "monk",
+      "text": "You are awake. Good. Kneel, child.",
+      "next": "n2"
+    },
+    "n2": {
+      "speaker": "monk",
+      "text": "Eighteen winters ago I found you in the ash of a burned village. I gave you a name, a blade, a purpose. Do you remember what I asked in return?",
+      "choices": [
+        {
+          "text": "Only obedience, Master.",
+          "next": "n3",
+          "effects": {
+            "set_flag": "obedient"
+          }
+        },
+        {
+          "text": "...I remember the ash. Not much else.",
+          "next": "n3"
+        }
+      ]
+    },
+    "n3": {
+      "speaker": "monk",
+      "text": "This temple sits at the centre of many pages. Every world you know has counterparts - other tellings of it, printed in other inks.",
+      "next": "n4"
+    },
+    "n4": {
+      "speaker": "monk",
+      "text": "A shore of woodblock waves. A city of smoke and lamplight. A metropolis of a thousand shimmering dots. Each one a reflection of ours.",
+      "next": "n5"
+    },
+    "n5": {
+      "speaker": "monk",
+      "text": "In each telling, someone hoards a light that is not theirs. Their greed is why our world grows dark. Bring their light home, and the balance returns.",
+      "next": "n6"
+    },
+    "n6": {
+      "speaker": "samurai",
+      "text": "And the people who hold these lights?",
+      "next": "n7"
+    },
+    "n7": {
+      "speaker": "monk",
+      "text": "...Are dangerous. Do not listen to them. Their words are the sharpest thing they carry.",
+      "next": "n8"
+    },
+    "n8": {
+      "speaker": "monk",
+      "text": "Each world is sealed by a key. Find it, and the page will let you leave. I will speak to you from behind the page.",
+      "choices": [
+        {
+          "text": "I am ready.",
+          "next": "n9"
+        },
+        {
+          "text": "Why do you always wear the mask, Master?",
+          "next": "mask"
+        }
+      ]
+    },
+    "mask": {
+      "speaker": "monk",
+      "text": "Because my light would blind you, child.",
+      "text_high_hope": "...Because some faces are not meant for children. Do not ask again.",
+      "next": "n9"
+    },
+    "n9": {
+      "speaker": "monk",
+      "text": "The gate is open. Mission one: The Order. Go.",
+      "effects": {
+        "set_flag": "monk_briefed",
+        "action": "save"
+      }
+    },
+    "repeat": {
+      "speaker": "monk",
+      "text": "The gate is open. Why do you linger?"
+    }
+  }
+}

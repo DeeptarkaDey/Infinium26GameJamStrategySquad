@@ -1,0 +1,90 @@
+{
+  "variants": [
+    {
+      "requires": {
+        "flag": "received_sacred_light"
+      },
+      "start": "after"
+    }
+  ],
+  "start": "v1",
+  "nodes": {
+    "v1": {
+      "speaker": "bhikkhu",
+      "text": "Let me tell you what your master is.",
+      "next": "v2"
+    },
+    "v2": {
+      "speaker": "bhikkhu",
+      "text": "Long ago, a monk led his order too far toward the light. He wanted it so badly he tried to own it. The light cast him out - him, and all who followed. Out in the dark, wanting turned him into an oni.",
+      "next": "v3"
+    },
+    "v3": {
+      "speaker": "bhikkhu",
+      "text": "Light and darkness are not enemies, child. Every world needs both, in balance. The wardens kept that balance. He needs their light to break his curse and walk back into ours - and swallow it whole.",
+      "next": "v4"
+    },
+    "v4": {
+      "speaker": "bhikkhu",
+      "text": "You cannot defeat him with stolen steel. Only with a light freely given.",
+      "choices": [
+        {
+          "text": "I made promises out there. To a girl, a boy, an artist. I mean to keep them.",
+          "next": "v_promise",
+          "requires": {
+            "flag": "kept_promise"
+          },
+          "effects": {
+            "hope": 10
+          }
+        },
+        {
+          "text": "Why would you give it to me, after what I did?",
+          "next": "v_why"
+        },
+        {
+          "text": "Then give it to me.",
+          "next": "v_give"
+        }
+      ]
+    },
+    "v_why": {
+      "speaker": "bhikkhu",
+      "text": "Because you are still the boy in the ash. Nobody ever asked that boy what he wanted.",
+      "text_low_hope": "Because someone once gave it to me, when I deserved it even less.",
+      "next": "v_give"
+    },
+    "v_give": {
+      "speaker": "bhikkhu",
+      "text": "Hold out your hands. Not like a blade. Like a bowl.",
+      "effects": {
+        "give_power": "sacred_light",
+        "set_flag": "received_sacred_light",
+        "heal": 999,
+        "hope": 10
+      },
+      "next": "v_got"
+    },
+    "v_got": {
+      "speaker": "narrator",
+      "text": "(POWER: SACRED LIGHT - press Q. Its strength grows with your hope. Only it can truly wound the Oni.)",
+      "next": "v_end"
+    },
+    "v_end": {
+      "speaker": "bhikkhu",
+      "text": "The gate behind me leads back to his temple. It is broken now - like him. Go gently. Then come home.",
+      "effects": {
+        "action": "save"
+      }
+    },
+    "after": {
+      "speaker": "bhikkhu",
+      "text": "The gate is open. Your light is enough. It was always enough."
+    },
+    "v_promise": {
+      "speaker": "bhikkhu",
+      "text": "Then you already know how to hold a light without taking it. That is the whole of it, child. The rest is only practice.",
+      "next": "v_give"
+    }
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "variants": [
+    {
+      "requires": {
+        "flag": "boss_defeated_world_truth"
+      },
+      "start": "post"
+    },
+    {
+      "requires": {
+        "flag": "found_last_page",
+        "not_flag": "aki_page_returned"
+      },
+      "start": "page"
+    },
+    {
+      "requires": {
+        "flag": "iro_done"
+      },
+      "start": "after"
+    }
+  ],
+  "start": "i1",
+  "nodes": {
+    "i1": {
+      "speaker": "iro",
+      "text": "Sit down, child. You walk like someone carrying too many lights.",
+      "next": "i2"
+    },
+    "i2": {
+      "speaker": "iro",
+      "text": "Well? What do you want from an old woman?",
+      "choices": [
+        {
+          "text": "Do you know where this world's key is?",
+          "next": "i_key",
+          "requires": {
+            "hope_min": 40
+          }
+        },
+        {
+          "text": "Where's the key, old woman?",
+          "next": "i_refuse",
+          "requires": {
+            "hope_max": 40
+          }
+        },
+        {
+          "text": "Who are you?",
+          "next": "i_who"
+        }
+      ]
+    },
+    "i_who": {
+      "speaker": "iro",
+      "text": "Just someone who has lived on the edge of a great many pages.",
+      "next": "i2"
+    },
+    "i_key": {
+      "speaker": "iro",
+      "text": "I do. And I'll give it to you, because you still have light enough to see by. Promise me you'll use it to go somewhere he isn't.",
+      "choices": [
+        {
+          "text": "I promise.",
+          "next": "i_end",
+          "effects": {
+            "hope": 6,
+            "give_key": "current",
+            "set_flag": "iro_done"
+          }
+        },
+        {
+          "text": "I can't promise that.",
+          "next": "i_end",
+          "effects": {
+            "hope": 1,
+            "give_key": "current",
+            "set_flag": "iro_done"
+          }
+        }
+      ]
+    },
+    "i_refuse": {
+      "speaker": "iro",
+      "text": "Hm. Your light's too low to see by, child. You'd only carry it back to him. Find it yourself - there's a shrine past the north turnstiles, where the ghouls nest. Maybe you'll find yourself in there too.",
+      "effects": {
+        "hope": -2,
+        "set_flag": "iro_done"
+      }
+    },
+    "i_end": {
+      "speaker": "iro",
+      "text": "Good. Now go meet him. Be gentle - he's you. And if my granddaughter asks you for a favour, do it. She sees further than I do."
+    },
+    "page": {
+      "speaker": "iro",
+      "text": "You read it, didn't you. Then you know what your master wears under that mask.",
+      "next": "page2"
+    },
+    "page2": {
+      "speaker": "iro",
+      "text": "Give it back to her anyway. Children should hold their own endings. Even the frightening ones."
+    },
+    "after": {
+      "speaker": "iro",
+      "text": "Go on. The brush is in your hand now."
+    },
+    "post": {
+      "speaker": "iro",
+      "text": "So you met him. And you're still standing, and still you. Good. The rest is just ink, child - and ink can be drawn over."
+    }
+  }
+}

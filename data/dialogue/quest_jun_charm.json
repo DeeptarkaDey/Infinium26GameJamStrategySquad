@@ -1,0 +1,14 @@
+{
+  "start": "q1",
+  "nodes": {
+    "q1": {
+      "speaker": "narrator",
+      "text": "Tangled in black kelp at the cove's edge: a fisherman's charm on a snapped cord. A name is carved into the wood. HANA.",
+      "next": "q2"
+    },
+    "q2": {
+      "speaker": "narrator",
+      "text": "Whoever wore it held on to it until the very end."
+    }
+  }
+}

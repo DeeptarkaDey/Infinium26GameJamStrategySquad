@@ -1,0 +1,24 @@
+{
+  "start": "s0",
+  "nodes": {
+    "s0": {
+      "speaker": "narrator",
+      "text": "The mirrors fell like rain. The Echo's light did not flee at once. It hesitated, as if looking back at you.",
+      "next": "s1"
+    },
+    "s1": {
+      "speaker": "echo",
+      "text": "Don't... kneel... to him.",
+      "next": "s2"
+    },
+    "s2": {
+      "speaker": "monk_voice",
+      "text": "THREE. Come home, my son. Come HOME.",
+      "next": "s3"
+    },
+    "s3": {
+      "speaker": "narrator",
+      "text": "His trick stays with you - slipping through the gutters between panels.  (POWER: PANEL SKIP - longer, untouchable dash)"
+    }
+  }
+}

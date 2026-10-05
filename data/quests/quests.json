@@ -1,0 +1,87 @@
+{
+  "quests": [
+    {
+      "id": "black_water",
+      "world": "world_order",
+      "title": "The Black Water",
+      "giver": "Hana",
+      "start_flag": "hana_helped",
+      "steps": [
+        {
+          "text": "Ask Old Sabu in the net store about Hana's papa, Jun.",
+          "done": "sabu_told_jun"
+        },
+        {
+          "text": "Search the flooded cove for any sign of Jun.",
+          "done": "found_jun_charm"
+        },
+        {
+          "text": "Bring Jun's charm back to Hana.",
+          "done": "hana_charm_returned"
+        },
+        {
+          "text": "Defeat Kagami, Weaver of Tides.",
+          "done": "boss_defeated_world_order"
+        },
+        {
+          "text": "The black water is rising. Talk to Hana before you leave.",
+          "done": "hana_epilogue"
+        }
+      ]
+    },
+    {
+      "id": "walk_them_home",
+      "world": "world_doubt",
+      "title": "Walk Them Home",
+      "giver": "Tobi",
+      "start_flag": "tobi_helped",
+      "steps": [
+        {
+          "text": "Ask Widow Mei how to find Tobi's sister Suzu in the fog.",
+          "done": "mei_told_lantern"
+        },
+        {
+          "text": "Find the apprentice's lantern in the cellar south-east of the kiln.",
+          "done": "found_apprentice_lantern"
+        },
+        {
+          "text": "Bring the lantern to Tobi and light it for Suzu.",
+          "done": "suzu_home"
+        },
+        {
+          "text": "Defeat the Lamplighter.",
+          "done": "boss_defeated_world_doubt"
+        },
+        {
+          "text": "No one walks the lost home now. Talk to Widow Mei.",
+          "done": "mei_epilogue"
+        }
+      ]
+    },
+    {
+      "id": "last_page",
+      "world": "world_truth",
+      "title": "The Last Page",
+      "giver": "Aki",
+      "start_flag": "aki_page_quest",
+      "steps": [
+        {
+          "text": "Find Aki's missing last page in the archive beneath the depot.",
+          "done": "found_last_page"
+        },
+        {
+          "text": "Bring the page back to Aki.",
+          "done": "aki_page_returned"
+        },
+        {
+          "text": "Defeat the Echo.",
+          "done": "boss_defeated_world_truth"
+        },
+        {
+          "text": "See what Aki draws now.",
+          "done": "aki_epilogue"
+        }
+      ]
+    }
+  ]
+}

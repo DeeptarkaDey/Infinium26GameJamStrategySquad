@@ -1,0 +1,89 @@
+{
+  "narrator": {
+    "name": "",
+    "style": "caption"
+  },
+  "samurai": {
+    "name": "You",
+    "color": "#8fb3ff"
+  },
+  "monk": {
+    "name": "The Master",
+    "color": "#d9a33a",
+    "revealed_flag": "monk_revealed",
+    "revealed_name": "The Oni",
+    "revealed_color": "#e0443a"
+  },
+  "monk_voice": {
+    "name": "The Master (behind the page)",
+    "color": "#d9a33a",
+    "style": "caption",
+    "revealed_flag": "monk_revealed",
+    "revealed_name": "The Oni"
+  },
+  "acolyte": {
+    "name": "Veiled Acolyte",
+    "color": "#c9b8d6"
+  },
+  "merchant": {
+    "name": "Merchant",
+    "color": "#c9a46a"
+  },
+  "hana": {
+    "name": "Hana",
+    "color": "#ff8a73"
+  },
+  "envoy_fox": {
+    "name": "Envoy of the Fox",
+    "color": "#e9e1cf"
+  },
+  "sabu": {
+    "name": "Old Sabu",
+    "color": "#8fb8d9"
+  },
+  "kagami": {
+    "name": "Kagami, Weaver of Tides",
+    "color": "#7fd0ff"
+  },
+  "mei": {
+    "name": "Widow Mei",
+    "color": "#e06a6a"
+  },
+  "envoy_veil": {
+    "name": "Envoy of the Veil",
+    "color": "#bdbdbd"
+  },
+  "tobi": {
+    "name": "Tobi",
+    "color": "#d0d0d0"
+  },
+  "lamplighter": {
+    "name": "The Lamplighter",
+    "color": "#ffd36b"
+  },
+  "aki": {
+    "name": "Aki",
+    "color": "#ffe600"
+  },
+  "envoy_horn": {
+    "name": "Envoy of the Horn",
+    "color": "#ff6b8a"
+  },
+  "iro": {
+    "name": "Grandma Iro",
+    "color": "#b48bff"
+  },
+  "echo": {
+    "name": "The Echo",
+    "color": "#4fd1ff"
+  },
+  "bhikkhu": {
+    "name": "The Old Bhikkhu",
+    "color": "#ffcf4a"
+  },
+  "unknown": {
+    "name": "A distant voice",
+    "color": "#fff2b0",
+    "style": "caption"
+  }
+}

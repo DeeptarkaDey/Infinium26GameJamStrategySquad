@@ -1,0 +1,191 @@
+{
+  "variants": [
+    {
+      "requires": {
+        "flag": "boss_defeated_world_doubt",
+        "not_flag": "tobi_hurt"
+      },
+      "start": "post"
+    },
+    {
+      "requires": {
+        "flag": [
+          "tobi_helped",
+          "found_apprentice_lantern"
+        ],
+        "not_flag": "suzu_home"
+      },
+      "start": "light"
+    },
+    {
+      "requires": {
+        "flag": "suzu_home"
+      },
+      "start": "after_home"
+    },
+    {
+      "requires": {
+        "flag": "tobi_helped"
+      },
+      "start": "after_kind"
+    },
+    {
+      "requires": {
+        "flag": "tobi_hurt"
+      },
+      "start": "after_cruel"
+    }
+  ],
+  "start": "t1",
+  "nodes": {
+    "t1": {
+      "speaker": "tobi",
+      "text": "D-don't hurt me! The veil-man said a samurai would come for thieves.",
+      "next": "t2"
+    },
+    "t2": {
+      "speaker": "tobi",
+      "text": "I only take bread for my sister. The bakery throws it out anyway!",
+      "choices": [
+        {
+          "text": "The Master wants an example.",
+          "next": "t_cruel",
+          "effects": {
+            "hope": -15,
+            "set_flag": "tobi_hurt"
+          },
+          "requires": {
+            "flag": "envoy_doubt_obeyed"
+          }
+        },
+        {
+          "text": "Here - buy real food. (20 gold)",
+          "next": "t_kind",
+          "effects": {
+            "gold": -20,
+            "hope": 10,
+            "set_flag": "tobi_helped"
+          },
+          "requires": {
+            "gold_min": 20
+          }
+        },
+        {
+          "text": "I'm not here for you. Go home.",
+          "next": "t_kind",
+          "effects": {
+            "hope": 4,
+            "set_flag": "tobi_helped"
+          }
+        },
+        {
+          "text": "Get lost.",
+          "next": "t_cold",
+          "effects": {
+            "hope": -4,
+            "set_flag": "tobi_hurt"
+          }
+        }
+      ]
+    },
+    "t_kind": {
+      "speaker": "tobi",
+      "text": "You're... really not like the others.",
+      "next": "t_key"
+    },
+    "t_key": {
+      "speaker": "tobi",
+      "text": "I found this in the Lamplighter's old house. He said it's the city's key, and to give it to someone who'd use it to go home. That's you, right?",
+      "next": "t_got"
+    },
+    "t_got": {
+      "speaker": "narrator",
+      "text": "A street kid's trust. It weighs more than the key.",
+      "effects": {
+        "give_key": "current"
+      },
+      "next": "t_sis"
+    },
+    "t_sis": {
+      "speaker": "tobi",
+      "text": "...Can I ask you something? My sister Suzu went into the fog two nights ago. She said the Lamplighter would walk her home, like always. He didn't come.",
+      "next": "t_sis2"
+    },
+    "t_sis2": {
+      "speaker": "tobi",
+      "text": "Widow Mei knows the fog roads. She's at the market by the lantern stall. Ask her? Please?"
+    },
+    "t_cruel": {
+      "speaker": "narrator",
+      "text": "You did what the Master wanted. The boy didn't scream. That was the worst part."
+    },
+    "t_cold": {
+      "speaker": "narrator",
+      "text": "Tobi bolts into the fog."
+    },
+    "after_kind": {
+      "speaker": "tobi",
+      "text": "Did Widow Mei say anything? Suzu's scared of the dark. She's been out there two whole nights."
+    },
+    "light": {
+      "speaker": "tobi",
+      "text": "That's... the apprentice's lantern! Mei's husband's! Light it - Suzu always follows lanterns!",
+      "next": "light2"
+    },
+    "light2": {
+      "speaker": "narrator",
+      "text": "You raise the lantern. The flame leans into the fog as if it's listening. Somewhere far off, small footsteps turn around.",
+      "next": "light3"
+    },
+    "light3": {
+      "speaker": "narrator",
+      "text": "A girl with soot on her cheeks steps out of the fog, blinking, and walks straight into her brother's arms.",
+      "effects": {
+        "set_flag": "suzu_home",
+        "hope": 8,
+        "give_potion": 1
+      },
+      "next": "light4"
+    },
+    "light4": {
+      "speaker": "tobi",
+      "text": "SUZU! ...Thank you. Thank you. Here - Suzu kept these for the Lamplighter. Medicine. He doesn't need it anymore, right?"
+    },
+    "after_home": {
+      "speaker": "tobi",
+      "text": "Suzu's asleep. First time in two nights. She drew you again - same big hat. Mei should keep the lantern. It's her husband's."
+    },
+    "post": {
+      "speaker": "tobi",
+      "text": "The fog's coming back thicker. Suzu's scared it'll take her again. ...The Lamplighter's not coming anymore, is he?",
+      "choices": [
+        {
+          "text": "No. But someone will carry the lantern.",
+          "next": "post_hope",
+          "effects": {
+            "hope": 3
+          }
+        },
+        {
+          "text": "No.",
+          "next": "post_no",
+          "effects": {
+            "hope": -2
+          }
+        }
+      ]
+    },
+    "post_hope": {
+      "speaker": "tobi",
+      "text": "...You? Then go tell Widow Mei. She'll want to know someone's still walking people home."
+    },
+    "post_no": {
+      "speaker": "narrator",
+      "text": "Tobi nods, very seriously, and goes to sit closer to his sister."
+    },
+    "after_cruel": {
+      "speaker": "narrator",
+      "text": "The alley is empty now."
+    }
+  }
+}

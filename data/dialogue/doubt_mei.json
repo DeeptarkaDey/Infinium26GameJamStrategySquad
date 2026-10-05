@@ -1,0 +1,168 @@
+{
+  "variants": [
+    {
+      "requires": {
+        "flag": "mei_vow"
+      },
+      "start": "after_vow"
+    },
+    {
+      "requires": {
+        "flag": "mei_epilogue"
+      },
+      "start": "after_all"
+    },
+    {
+      "requires": {
+        "flag": "boss_defeated_world_doubt"
+      },
+      "start": "post"
+    },
+    {
+      "requires": {
+        "flag": [
+          "mei_done",
+          "tobi_helped"
+        ],
+        "not_flag": "mei_told_lantern"
+      },
+      "start": "lantern"
+    },
+    {
+      "requires": {
+        "flag": "mei_done"
+      },
+      "start": "after"
+    }
+  ],
+  "start": "m1",
+  "nodes": {
+    "m1": {
+      "speaker": "mei",
+      "text": "Another of HIS. The veiled one came first, then you. He always sends the masked ones before the blade.",
+      "next": "m2"
+    },
+    "m2": {
+      "speaker": "mei",
+      "text": "My husband was the Lamplighter's apprentice. When he died, the Lamplighter carried his soul through the fog so it wouldn't be lost. I saw it. I saw him smile.",
+      "choices": [
+        {
+          "text": "A boy named Tobi says his sister is lost in the fog.",
+          "next": "lantern",
+          "requires": {
+            "flag": "tobi_helped"
+          },
+          "effects": {
+            "set_flag": "mei_done"
+          }
+        },
+        {
+          "text": "I'm sorry for your loss.",
+          "next": "m_sorry",
+          "effects": {
+            "hope": 5,
+            "set_flag": "mei_done"
+          }
+        },
+        {
+          "text": "My master says the Lamplighter burns souls.",
+          "next": "m_counter",
+          "effects": {
+            "set_flag": [
+              "mei_done",
+              "clue_doubt"
+            ]
+          }
+        },
+        {
+          "text": "Not my concern.",
+          "next": "m_cold",
+          "effects": {
+            "hope": -5,
+            "set_flag": "mei_done"
+          }
+        }
+      ]
+    },
+    "m_sorry": {
+      "speaker": "mei",
+      "text": "...Thank you. No one has said that to me in this city. Not once. Be careful who you believe, samurai. Lamps don't burn the things they guide."
+    },
+    "m_counter": {
+      "speaker": "mei",
+      "text": "Then your master has never stood in the fog and watched someone come home."
+    },
+    "m_cold": {
+      "speaker": "mei",
+      "text": "No. I suppose it isn't."
+    },
+    "lantern": {
+      "speaker": "mei",
+      "text": "Suzu. Of course. The fog keeps the lost the way a pocket keeps coins.",
+      "next": "lantern2"
+    },
+    "lantern2": {
+      "speaker": "mei",
+      "text": "My husband's lantern still burns in the old cellar past the kiln, in the south-east. No one has dared touch it since he died. A lit lamp is a road home. Take it to the boy.",
+      "effects": {
+        "set_flag": "mei_told_lantern",
+        "hope": 2
+      }
+    },
+    "after": {
+      "speaker": "mei",
+      "text": "The fog is thicker since you came. That isn't a coincidence."
+    },
+    "post": {
+      "speaker": "narrator",
+      "text": "The fog has thickened since the Lamplighter fell. Somewhere in it, someone is calling a name and getting no answer.",
+      "next": "post2"
+    },
+    "post2": {
+      "speaker": "mei",
+      "text": "He walked them home for a hundred years. Who walks them now, samurai?",
+      "choices": [
+        {
+          "text": "I'll carry the lantern.",
+          "next": "vow",
+          "requires": {
+            "flag": "found_apprentice_lantern"
+          },
+          "effects": {
+            "hope": 6,
+            "set_flag": [
+              "mei_epilogue",
+              "mei_vow",
+              "kept_promise"
+            ],
+            "give_weapon": "storm_rod"
+          }
+        },
+        {
+          "text": "I don't know.",
+          "next": "post_idk",
+          "effects": {
+            "hope": -2,
+            "set_flag": "mei_epilogue"
+          }
+        }
+      ]
+    },
+    "vow": {
+      "speaker": "mei",
+      "text": "Then take his lantern pole too. It drank a thunderstorm once - it can drink a little fog. Don't you dare put it down."
+    },
+    "post_idk": {
+      "speaker": "mei",
+      "text": "Neither do I. That's what frightens me."
+    },
+    "after_vow": {
+      "speaker": "mei",
+      "text": "Keep it lit. That's all he ever did. That's all any of us can do."
+    },
+    "after_all": {
+      "speaker": "mei",
+      "text": "Go. Someone is waiting at the end of your road too."
+    }
+  }
+}

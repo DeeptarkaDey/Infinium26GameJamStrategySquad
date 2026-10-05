@@ -1,0 +1,19 @@
+{
+  "start": "s0",
+  "nodes": {
+    "s0": {
+      "speaker": "monk_voice",
+      "text": "Prism Metro. Its warden is the brightest thief of all - one who wears YOUR face, child, to mock you.",
+      "next": "s1"
+    },
+    "s1": {
+      "speaker": "monk_voice",
+      "text": "This is the last one. Bring me its light, and I will show you mine.",
+      "next": "s2"
+    },
+    "s2": {
+      "speaker": "narrator",
+      "text": "MISSION 3 - THE TRUTH."
+    }
+  }
+}

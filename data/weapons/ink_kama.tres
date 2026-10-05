@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="WeaponData" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/weapon_data.gd" id="1_script"]
+
+[resource]
+script = ExtResource("1_script")
+id = "ink_kama"
+display_name = "Ink Kama"
+description = "A sickle dipped in poisoned ink. Every cut keeps bleeding."
+kind = 3
+rarity = 1
+damage = 11.0
+attack_cooldown = 0.24
+reach = 50.0
+knockback = 150.0
+price = 120
+drop_weight = 0.9
+sfx_word = "SHIK!"
+blade_color = Color(0.45, 0.85, 0.35, 1.0)
+element = "poison"
+world_tags = PackedStringArray("world_truth")

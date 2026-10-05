@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="WeaponData" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/weapon_data.gd" id="1_script"]
+
+[resource]
+script = ExtResource("1_script")
+id = "dawn_edge"
+display_name = "Dawn Edge"
+description = "It hums when someone nearby is grieving."
+kind = 0
+rarity = 3
+damage = 30.0
+attack_cooldown = 0.4
+reach = 78.0
+knockback = 300.0
+price = 340
+drop_weight = 0.5
+sfx_word = "SHINNG!"
+blade_color = Color(1.000, 0.812, 0.290, 1.0)
+world_tags = PackedStringArray("world_truth")

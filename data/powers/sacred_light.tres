@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="PowerData" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/power_data.gd" id="1_script"]
+
+[resource]
+script = ExtResource("1_script")
+id = "sacred_light"
+display_name = "Sacred Light"
+description = "The Vihara's gift. [Q] a wave of true light whose strength grows with your hope. The only thing an oni truly fears."
+source_world = "vihara"
+kind = 1
+cooldown = 4.0
+stat_mods = {"max_health": 30, "damage_mult": 0.15}
+color = Color(1.000, 0.949, 0.690, 1.0)
